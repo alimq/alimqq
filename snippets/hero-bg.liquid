@@ -1,0 +1,8 @@
+{{ 'hero-bg.css' | asset_url | stylesheet_tag }}
+<picture class="hero-bg">
+    <source srcset="{{ 'hero.svg' | asset_url }}" media="
+    (max-width: 419px)">
+    <source srcset="{{ 'hero.png' | asset_url }}" media="
+    (min-width: 420px)">
+    <img class="hero-bg" src="{{ 'hero.png' | asset_url }}">
+</picture>
