@@ -1,45 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Express + Liquid</title>
+    <title>Alimqq, Shopify Dev - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="{{ 'Inter_18pt-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'CormorantGaramond-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'CormorantGaramond-Medium.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'CormorantGaramond-SemiBold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
+    {{ 'theme.css?v=2.1' | asset_url | stylesheet_tag }}
     <div class="wrapper">
         {% render 'hero' %}
     </div>
     <p class="width-text">
     Device width must be between 162 and 4096 px.
     </p>
-    <style>
-        @media (max-width: 161px) {
-            .wrapper {
-                display: none;
-            }
-            body {
-                padding: 10px;
-            }
-            .width-text {
-                display: inline;
-            }
-        }
-        @media (min-width: 162px) and (max-width: 4096px) {
-            .width-text {
-                display: none;
-            }
-        }
-        @media (min-width: 4097px) {
-            .wrapper {
-                display: none;
-            }
-            body {
-                padding: 100px;
-            }
-            .width-text {
-                display: inline;
-                font-size: 200px;
-            }
-        }
-    </style>
 </body>
 </html>

@@ -1,4 +1,8 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 <div class="hero">
-{% render 'hero-bg' %}
+    {% render 'hero-bg' %}
+    <div class="content">
+        {% render 'hero-title' %}
+        {% render 'hero-button' %}
+    </div>
 </div>

@@ -1,23 +1,39 @@
-.hero .hero-bg {
-    aspect-ratio: 162/91;
+.hero .hero-bg, .hero .hero-bg-gif, .hero .hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
     opacity: 0.5;
+    z-index: 1;
 }
 @media (min-width: 162px) and (max-width: 419px) {
-    
+    .hero .hero-bg-gif, .hero .hero-bg-video {
+        display: none;
+    }
 }
 @media (min-width: 420px) and (max-width: 699px) {
-    
+    .hero .hero-bg, .hero .hero-bg-video {
+        display: none;
+    }
 }
 @media (min-width: 700px) and (max-width: 1279px) {
-    
+    .hero .hero-bg, .hero .hero-bg-gif {
+        display: none;
+    }
 }
 @media (min-width: 1280px) and (max-width: 1919px) {
-    
+    .hero .hero-bg, .hero .hero-bg-gif {
+        display: none;
+    }
 }
 @media (min-width: 1920px) and (max-width: 4095px) {
-    
+    .hero .hero-bg, .hero .hero-bg-gif {
+        display: none;
+    }
 }
 @media (min-width: 4096px) and (max-width: 4096px) {
-    
+    .hero .hero-bg, .hero .hero-bg-gif {
+        display: none;
+    }
 }

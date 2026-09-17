@@ -1,0 +1,41 @@
+.hero .hero-title {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    margin: 0;
+    z-index: 3;
+}
+@media (min-width: 162px) and (max-width: 419px) {
+    .hero .hero-title {
+        font-size: 12vw;
+        letter-spacing: 1px;
+    }
+}
+@media (min-width: 420px) and (max-width: 699px) {
+    .hero .hero-title {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+@media (min-width: 700px) and (max-width: 1279px) {
+    .hero .hero-title {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+}
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .hero .hero-title {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+}
+@media (min-width: 1920px) and (max-width: 4095px) {
+    .hero .hero-title {
+        font-size: 80px;
+        letter-spacing: 2px;
+    }
+}
+@media (min-width: 4096px) and (max-width: 4096px) {
+    .hero .hero-title {
+        font-size: 150px;
+        letter-spacing: 3px;
+    }
+}

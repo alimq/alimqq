@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/Inter_18pt-Regular.woff') format('woff'),
+        url('/assets/Inter_18pt-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/CormorantGaramond-Regular.woff') format('woff'),
+        url('/assets/CormorantGaramond-Regular.woff2') format('woff2');
+}
+@media (max-width: 161px) {
+    .wrapper {
+        display: none;
+    }
+    body {
+        padding: 10px;
+    }
+    .width-text {
+        display: inline;
+    }
+}
+@media (min-width: 162px) and (max-width: 4096px) {
+    .width-text {
+        display: none;
+    }
+    body {
+        margin: 0;
+    }
+}
+@media (min-width: 4097px) {
+    .wrapper {
+        display: none;
+    }
+    body {
+        padding: 100px;
+    }
+    .width-text {
+        display: inline;
+        font-size: 200px;
+    }
+}
