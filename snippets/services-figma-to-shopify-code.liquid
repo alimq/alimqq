@@ -1,0 +1,28 @@
+{{ 'services-figma-to.css' | asset_url | stylesheet_tag }}
+<div class="col">
+    <p>
+        Figma to Shopify Code
+    </p>
+    <picture class="figma-to-shopify-pic">
+        <source media="(max-width: 419px)" srcset="
+        {{ 'small-figma-to-shopify-1.svg' | asset_url }}">
+        <source media="(min-width: 420px)" srcset="
+        {{ 'small-figma-to-shopify-1.png' | asset_url }}">
+        <img class="figma-to-shopify-pic" src="
+        {{ 'small-figma-to-shopify-1.png' | asset_url }}">
+    </picture>
+    <p>
+    TO
+    </p>
+    <picture class="figma-to-shopify-pic">
+        <source media="(max-width: 419px)" srcset="
+        {{ 'small-figma-to-shopify-2.svg' | asset_url }}">
+        <source media="(min-width: 420px)" srcset="
+        {{ 'small-figma-to-shopify-2.png' | asset_url }}">
+        <img class="figma-to-shopify-pic" src="
+        {{ 'small-figma-to-shopify-2.png' | asset_url }}">
+    </picture>
+    <p>
+        I code custom Liquid from scratch in VS Code. Figma design will match 100%
+    </p>
+</div>
