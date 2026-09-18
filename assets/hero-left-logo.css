@@ -1,7 +1,12 @@
 .hero .hero-left-logo {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    text-decoration-line: underline;
+    text-decoration-color: #fe8a69;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 @media (min-width: 162px) and (max-width: 419px) {
     

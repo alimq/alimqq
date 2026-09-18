@@ -1,7 +1,7 @@
 .hero .hero-right-menu {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
 }
 @media (min-width: 162px) and (max-width: 419px) {
     
