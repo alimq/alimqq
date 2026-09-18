@@ -45,3 +45,6 @@
         font-size: 200px;
     }
 }
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}

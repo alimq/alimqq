@@ -7,6 +7,7 @@
     text-decoration-color: #fe8a69;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
 }
 @media (min-width: 162px) and (max-width: 419px) {
     

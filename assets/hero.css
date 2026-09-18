@@ -8,6 +8,9 @@
     .hero .container {
         flex-direction: column;
     }
+    .hero .container .block-1 {
+        display: flex;
+    }
     .hero .container .block-3 {
         display: none;
     }
@@ -15,6 +18,8 @@
 @media (min-width: 420px) and (max-width: 699px) {
     .hero .container {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
     .hero .container .block-1 {
         display: none;
@@ -23,6 +28,8 @@
 @media (min-width: 700px) and (max-width: 1279px) {
     .hero .container {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
     .hero .container .block-1 {
         display: none;
@@ -31,6 +38,8 @@
 @media (min-width: 1280px) and (max-width: 1919px) {
     .hero .container {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
     .hero .container .block-1 {
         display: none;
@@ -39,6 +48,8 @@
 @media (min-width: 1920px) and (max-width: 4095px) {
     .hero .container {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
     .hero .container .block-1 {
         display: none;
@@ -47,6 +58,8 @@
 @media (min-width: 4096px) and (max-width: 4096px) {
     .hero .container {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
     }
     .hero .container .block-1 {
         display: none;

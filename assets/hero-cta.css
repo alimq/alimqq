@@ -37,6 +37,7 @@
 }
 .hero .hero-cta .cta-p {
     text-align: center;
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
 }
 .hero .hero-cta ul li {
     display: flex;
@@ -49,7 +50,9 @@
     }
 }
 @media (min-width: 420px) and (max-width: 699px) {
-    
+    .hero .hero-cta {
+        font-size: 12px;
+    }
 }
 @media (min-width: 700px) and (max-width: 1279px) {
     
