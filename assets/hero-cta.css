@@ -1,0 +1,49 @@
+.hero .hero-cta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hero .hero-cta ul li input {
+    background-color: #fe8a69;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.hero .hero-cta ul li input:checked {
+    background-image: url('/assets/checked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero .hero-cta button {
+    border: none;
+    background-color: #fe8a69;
+}
+.hero .hero-cta .cta-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 16px 4px;
+}
+.hero .hero-cta .cta-p {
+    text-align: center;
+}
+@media (min-width: 162px) and (max-width: 419px) {
+    
+}
+@media (min-width: 420px) and (max-width: 699px) {
+    
+}
+@media (min-width: 700px) and (max-width: 1279px) {
+    
+}
+@media (min-width: 1280px) and (max-width: 1919px) {
+    
+}
+@media (min-width: 1920px) and (max-width: 4095px) {
+    
+}
+@media (min-width: 4096px) and (max-width: 4096px) {
+    
+}
