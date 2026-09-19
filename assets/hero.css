@@ -20,6 +20,7 @@
         flex-direction: row;
         justify-content: center;
         gap: 30px;
+        padding-top: 80px;
     }
     .hero .container .block-1 {
         display: none;
@@ -29,39 +30,68 @@
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        gap: 10%;
+        padding-top: 80px;
     }
     .hero .container .block-1 {
         display: none;
+    }
+    .hero .container .block-2 {
+        width: 40%;
+    }
+    .hero .container .block-3 {
+        width: 40%;
     }
 }
 @media (min-width: 1280px) and (max-width: 1919px) {
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        gap: 6%;
+        padding-top: 80px;
     }
     .hero .container .block-1 {
         display: none;
+    }
+    .hero .container .block-2 {
+        width: 40%;
+    }
+    .hero .container .block-3 {
+        width: 40%;
     }
 }
 @media (min-width: 1920px) and (max-width: 4095px) {
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        gap: 5%;
+        padding-top: 80px;
+        padding-top: 150px;
     }
     .hero .container .block-1 {
         display: none;
+    }
+    .hero .container .block-2 {
+        width: 40%;
+    }
+    .hero .container .block-3 {
+        width: 40%;
     }
 }
 @media (min-width: 4096px) and (max-width: 4096px) {
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
+        gap: 3%;
+        padding-top: 300px;
     }
     .hero .container .block-1 {
         display: none;
+    }
+    .hero .container .block-2 {
+        width: 40%;
+    }
+    .hero .container .block-3 {
+        width: 40%;
     }
 }

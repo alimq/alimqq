@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #ffffff;
     box-shadow: 0 0 16px 1px;
     padding-bottom: 20px;
@@ -44,6 +45,9 @@
     flex-direction: row;
     align-items: center;
 }
+.hero .hero-cta .cta-block {
+    aspect-ratio: 1/0.7;
+}
 @media (min-width: 162px) and (max-width: 419px) {
     .hero .hero-cta {
         font-size: 12px;
@@ -55,14 +59,70 @@
     }
 }
 @media (min-width: 700px) and (max-width: 1279px) {
-    
+    .hero .hero-cta {
+        width: 100%;
+        height: auto;
+    }
+    .hero .hero-cta .cta-block {
+        width: 100%;
+        height: auto;
+    }
+    .hero .hero-cta ul li input {
+        width: 2vw;
+        height: 2vw;
+    }
 }
 @media (min-width: 1280px) and (max-width: 1919px) {
-    
+    .hero .hero-cta {
+        width: 100%;
+        height: auto;
+        font-size: 2vw;
+    }
+    .hero .hero-cta button {
+        font-size: 2vw;
+    }
+    .hero .hero-cta .cta-block {
+        width: 100%;
+        height: auto;
+    }
+    .hero .hero-cta ul li input {
+        width: 2vw;
+        height: 2vw;
+    }
 }
 @media (min-width: 1920px) and (max-width: 4095px) {
-    
+    .hero .hero-cta {
+        width: 100%;
+        height: auto;
+        font-size: 2vw;
+    }
+    .hero .hero-cta button {
+        font-size: 2vw;
+    }
+    .hero .hero-cta .cta-block {
+        width: 100%;
+        height: auto;
+    }
+    .hero .hero-cta ul li input {
+        width: 2vw;
+        height: 2vw;
+    }
 }
 @media (min-width: 4096px) and (max-width: 4096px) {
-    
+    .hero .hero-cta {
+        width: 100%;
+        height: auto;
+        font-size: 2vw;
+    }
+    .hero .hero-cta button {
+        font-size: 2vw;
+    }
+    .hero .hero-cta .cta-block {
+        width: 100%;
+        height: auto;
+    }
+    .hero .hero-cta ul li input {
+        width: 2vw;
+        height: 2vw;
+    }
 }

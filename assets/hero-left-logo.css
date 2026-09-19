@@ -10,20 +10,34 @@
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
 }
 @media (min-width: 162px) and (max-width: 419px) {
-    
+    .hero .hero-left-logo {
+        font-size: 12px;
+    }    
 }
 @media (min-width: 420px) and (max-width: 699px) {
-    
+    .hero .hero-left-logo {
+        font-size: 30px;
+    }   
 }
 @media (min-width: 700px) and (max-width: 1279px) {
-    
+    .hero .hero-left-logo {
+        font-size: 2vw;
+    }   
 }
 @media (min-width: 1280px) and (max-width: 1919px) {
-    
+    .hero .hero-left-logo {
+        font-size: 2vw;
+    }   
 }
 @media (min-width: 1920px) and (max-width: 4095px) {
-    
+    .hero .hero-left-logo {
+        font-size: 2vw;
+    }   
 }
 @media (min-width: 4096px) and (max-width: 4096px) {
-    
+    .hero .hero-left-logo {
+        font-size: 2vw;
+        top: 60px;
+        left: 60px;
+    }   
 }

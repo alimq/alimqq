@@ -3,21 +3,73 @@
     top: 10px;
     right: 10px;
 }
+.hero .hero-full-right-menu {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.hero .hero-full-right-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 @media (min-width: 162px) and (max-width: 419px) {
-    
+    .hero .hero-full-right-menu {
+        display: none;
+    }
 }
 @media (min-width: 420px) and (max-width: 699px) {
-    
+    .hero .hero-right-menu {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+    }
+    .hero .hero-full-right-menu {
+        display: none;
+    }
 }
 @media (min-width: 700px) and (max-width: 1279px) {
-    
+    .hero .hero-right-menu {
+        top: 15px;
+        right: 15px;
+        width: 30px;
+    }
+    .hero .hero-full-right-menu {
+        display: none;
+    }
 }
 @media (min-width: 1280px) and (max-width: 1919px) {
-    
+    .hero .hero-right-menu {
+        display: none;
+    }
+    .hero .hero-full-right-menu {
+        font-size: 2vw;
+    }
 }
 @media (min-width: 1920px) and (max-width: 4095px) {
-    
+    .hero .hero-right-menu {
+        display: none;
+    }
+    .hero .hero-full-right-menu {
+        font-size: 2vw;
+    }
+    .hero .hero-full-right-menu ul {
+        gap: 60px;
+    }
 }
 @media (min-width: 4096px) and (max-width: 4096px) {
-    
+    .hero .hero-right-menu {
+        display: none;
+    }
+    .hero .hero-full-right-menu {
+        font-size: 2vw;
+        top: 60px;
+        right: 60px;
+    }
+    .hero .hero-full-right-menu ul {
+        gap: 100px;
+    }
 }
