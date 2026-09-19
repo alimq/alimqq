@@ -1,5 +1,9 @@
 .hero .hero-pic {
     height: 250px;
+    border-radius: 100%;
+}
+.hero .hero-pic img {
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
 }
 @media (min-width: 162px) and (max-width: 419px) {
     .hero .hero-pic {
@@ -7,32 +11,10 @@
         margin: auto;
     }
 }
-@media (min-width: 420px) and (max-width: 699px) {
-    .hero .hero-pic {
-        height: 220px;
-    }
-}
-@media (min-width: 700px) and (max-width: 1279px) {
+@media (min-width: 420px) and (max-width: 4096px) {
     .hero .hero-pic {
         width: 100%;
         height: auto;
-    }
-}
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .hero .hero-pic {
-        width: 100%;
-        height: auto;
-    }
-}
-@media (min-width: 1920px) and (max-width: 4095px) {
-    .hero .hero-pic {
-        width: 100%;
-        height: auto;
-    }
-}
-@media (min-width: 4096px) and (max-width: 4096px) {
-    .hero .hero-pic {
-        width: 100%;
-        height: auto;
+        margin: auto;
     }
 }

@@ -1,12 +1,16 @@
 .hero .container {
     display: flex;
-    padding-top: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+}
+.hero .container .block-2 {
+    display: flex;
 }
 @media (min-width: 162px) and (max-width: 419px) {
     .hero .container {
         flex-direction: column;
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 8vw;
     }
     .hero .container .block-1 {
         display: flex;
@@ -15,83 +19,26 @@
         display: none;
     }
 }
+@media (min-width: 420px) and (max-width: 4096px) {
+    .hero .container {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 9.5vw;
+        gap: 8vw;
+    }
+    .hero .container .block-1 {
+        display: none;
+    }
+    .hero .container .block-2 {
+        width: 40%;
+    }
+    .hero .container .block-3 {
+        display: flex;
+        width: 40%;
+    }
+}
 @media (min-width: 420px) and (max-width: 699px) {
     .hero .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px;
-        padding-top: 80px;
-    }
-    .hero .container .block-1 {
-        display: none;
-    }
-}
-@media (min-width: 700px) and (max-width: 1279px) {
-    .hero .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10%;
-        padding-top: 80px;
-    }
-    .hero .container .block-1 {
-        display: none;
-    }
-    .hero .container .block-2 {
-        width: 40%;
-    }
-    .hero .container .block-3 {
-        width: 40%;
-    }
-}
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .hero .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 6%;
-        padding-top: 80px;
-    }
-    .hero .container .block-1 {
-        display: none;
-    }
-    .hero .container .block-2 {
-        width: 40%;
-    }
-    .hero .container .block-3 {
-        width: 40%;
-    }
-}
-@media (min-width: 1920px) and (max-width: 4095px) {
-    .hero .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 5%;
-        padding-top: 80px;
-        padding-top: 150px;
-    }
-    .hero .container .block-1 {
-        display: none;
-    }
-    .hero .container .block-2 {
-        width: 40%;
-    }
-    .hero .container .block-3 {
-        width: 40%;
-    }
-}
-@media (min-width: 4096px) and (max-width: 4096px) {
-    .hero .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 3%;
-        padding-top: 300px;
-    }
-    .hero .container .block-1 {
-        display: none;
-    }
-    .hero .container .block-2 {
-        width: 40%;
-    }
-    .hero .container .block-3 {
-        width: 40%;
+        padding-top: 13vw !important;
     }
 }
