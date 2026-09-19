@@ -1,15 +1,15 @@
-.hero .hero-right-menu {
+.header .hero-right-menu {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
-.hero .hero-full-right-menu {
+.header .hero-full-right-menu {
     position: absolute;
     top: 15px;
     right: 15px;
 }
-.hero .hero-full-right-menu ul {
+.header .hero-full-right-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -18,30 +18,30 @@
     gap: 20px;
 }
 @media (min-width: 162px) and (max-width: 419px) {
-    .hero .hero-full-right-menu {
+    .header .hero-full-right-menu {
         display: none;
     }
 }
 @media (min-width: 420px) and (max-width: 1279px) {
-    .hero .hero-right-menu {
+    .header .hero-right-menu {
         top: 1.5vw;
         right: 1.5vw;
         width: 6vw;
     }
-    .hero .hero-full-right-menu {
+    .header .hero-full-right-menu {
         display: none;
     }
 }
 @media (min-width: 1280px) and (max-width: 4096px) {
-    .hero .hero-full-right-menu {
+    .header .hero-full-right-menu {
         font-size: 2vw;
         top: 2vw;
         right: 3vw;
     }
-    .hero .hero-full-right-menu ul {
+    .header .hero-full-right-menu ul {
         gap: 3vw;
     }
-    .hero .hero-right-menu {
+    .header .hero-right-menu {
         display: none;
     }
 }

@@ -3,13 +3,14 @@
 <head>
     <title>Alimqq, Shopify Dev - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
     <link rel="preload" href="{{ 'Inter_18pt-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ 'CormorantGaramond-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {% render 'header' %}
     <div class="wrapper">
-        {% render 'hero' %}
+        {% block content %}{% endblock %}
     </div>
     <p class="width-text">
     Device width must be between 162 and 4096 px.

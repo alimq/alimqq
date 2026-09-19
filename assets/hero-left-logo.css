@@ -1,4 +1,4 @@
-.hero .hero-left-logo {
+.header .hero-left-logo {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -10,12 +10,12 @@
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
 }
 @media (min-width: 162px) and (max-width: 699px) {
-    .hero .hero-left-logo {
+    .header .hero-left-logo {
         font-size: 18px !important;
     }
 }
 @media (min-width: 420px) and (max-width: 4096px) {
-    .hero .hero-left-logo {
+    .header .hero-left-logo {
         font-size: 3vw;
         text-decoration-thickness: 0.4vw;
         text-underline-offset: 0.6vw;
