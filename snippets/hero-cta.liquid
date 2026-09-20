@@ -43,6 +43,9 @@
             const popupEl=document.getElementById('modal');
             const wrapper=document.querySelectorAll('.wrapper')[0];
             const popupText=document.getElementById('modal-text');
+            const whatsapp=document.getElementById('whatsapp-link');
+            const telegram=document.getElementById('telegram-link');
+            const gmail=document.getElementById('gmail-link');
             function talkHandle() {
                 let text="";
                 checkboxes.forEach(checkbox => {
@@ -58,6 +61,12 @@
                 wrapper.classList.add('is-background');
                 popupText.textContent='Copied to clipboard: "' + 
                 text + '"';
+                whatsapp.href = `https://wa.me/77078932196?text=` +
+                 encodeURIComponent(text);
+                telegram.href = `https://t.me/alim_qq?text=` + 
+                encodeURIComponent(text);
+                gmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=alimimanmalik2@gmail.com&su=Website&body=` + 
+                 encodeURIComponent(text);
             }
             ctaTalkEl.addEventListener('click',talkHandle);
             document.addEventListener('click', (event) => {

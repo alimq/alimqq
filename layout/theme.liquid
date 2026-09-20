@@ -9,7 +9,28 @@
 </head>
 <body>
     <div id="modal" style="display: none;">
-        <p id="modal-text">Modal window</p>
+        <p id="modal-text"></p>
+        <a href="#" target="_blank" id="whatsapp-link">
+            <button class="send-btn">
+                Send to <img src="{{ 
+                    'whatsapp.svg' | asset_url }}"
+                    class="btn-pic">
+            </button>
+        </a>
+        <a href="#" target="_blank" id="telegram-link">
+            <button class="send-btn">
+                Send to <img src="{{ 
+                    'telegram.svg' | asset_url }}"
+                    class="btn-pic">
+            </button>
+        </a>
+        <a href="#" target="_blank" id="gmail-link">
+            <button class="send-btn">
+                Send to <img src="{{ 
+                    'gmail.svg' | asset_url }}"
+                    class="btn-pic">
+            </button>
+        </a>
     </div>
     <div class="wrapper">
         {% render 'header' %}

@@ -51,15 +51,58 @@
     z-index: 4;
     width: 80%;
     aspect-ratio: 1/1;
-    top: 25%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ffffff;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
+    gap: 10px;
 }
 .wrapper.is-background {
     opacity: 0.5;
+}
+#modal .btn-pic {
+    width: 30px;
+    aspect-ratio: auto;
+}
+#modal p {
+    margin: 0;
+    text-align: center;
+}
+#modal .send-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fe8a69;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 15px;
+    cursor: pointer;
+}
+@media (min-width: 700px) {
+    #modal {
+        width: 40% !important;
+        font-size: 2vw !important;
+        padding: 1.5vw !important;
+        gap: 1.5vw !important;
+        box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
+    }
+    #modal .send-btn {
+        font-size: 2vw !important;
+        padding: 1.5vw !important;
+        gap: 2vw !important;
+    }
+    #modal .btn-pic {
+        width: 3vw !important;
+    }
+}
+@media (min-width: 1280px) {
+    #modal {
+        width: 25% !important;
+    }
 }
