@@ -6,4 +6,5 @@ set -e
 
 rsync -avz --exclude='.git' --exclude='__pycache__' --exclude='node_modules' ./ root@46.224.80.50:/alimqq-responsive/code/
 
+ssh root@46.224.80.50 "sudo pm2 restart all"
 ssh root@46.224.80.50 "sudo systemctl restart alimqq.service"

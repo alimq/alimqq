@@ -6,17 +6,68 @@
     <div class="cta-block">
         <ul>
             <li>
-            <input type="checkbox"> Mobile Responsive</li>
+            <input class="checkbox-service" type="checkbox"
+             data-price="100" data-name="Mobile Responsive"> Mobile Responsive</li>
             <li>
-            <input type="checkbox"> SEO & Speed Ready</li>
+            <input class="checkbox-service" type="checkbox" 
+            data-price="50" data-name="SEO & Speed Ready"> SEO & Speed Ready</li>
             <li>
-            <input type="checkbox"> Custom Liquid</li>
+            <input class="checkbox-service" type="checkbox" 
+            data-price="25" data-name="Custom Liquid"> Custom Liquid</li>
         </ul>
         <p class="cta-price">
-            Starting from $240
+            Starting from $<span id="total-price">100</span>
         </p>
-        <button class="cta-talk">
+        <button class="cta-talk" id="cta-talk">
             Let's talk
         </button>
+        <script>
+            const basePrice=100;
+            const checkboxes=document.querySelectorAll('.checkbox-service');
+            const totalPriceEl=document.getElementById('total-price');
+            function calcT() {
+                let total=basePrice;
+                checkboxes.forEach(checkbox => {
+                    if(checkbox.checked) {
+                        total+=parseFloat(checkbox.dataset.price);
+                    }
+                });
+                totalPriceEl.textContent=total;
+            }
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change',
+                calcT);
+            });
+
+            const ctaTalkEl=document.getElementById('cta-talk');
+            const popupEl=document.getElementById('modal');
+            const wrapper=document.querySelectorAll('.wrapper')[0];
+            const popupText=document.getElementById('modal-text');
+            function talkHandle() {
+                let text="";
+                checkboxes.forEach(checkbox => {
+                    if(checkbox.checked) {
+                        if(text=="") text=checkbox.dataset.name;
+                        else text+=" and " + checkbox.dataset.name;
+                    }
+                })
+                if(text=="") text="Hi! I want a website.";
+                else text = "Hi! I want a website that is " + text + ".";
+                navigator.clipboard.writeText(text);
+                popupEl.classList.add('visible');
+                wrapper.classList.add('is-background');
+                popupText.textContent='Copied to clipboard: "' + 
+                text + '"';
+            }
+            ctaTalkEl.addEventListener('click',talkHandle);
+            document.addEventListener('click', (event) => {
+                const isClickInside=popupEl.contains(event.target);
+                const isClickOnOpenBtn=ctaTalkEl.contains(event.target);
+                if(!isClickInside && !isClickOnOpenBtn) {
+                    popupEl.classList.remove('visible');
+                    wrapper.classList.remove('is-background');
+                }
+            })
+        </script>
     </div>
 </div>

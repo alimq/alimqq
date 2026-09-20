@@ -8,8 +8,11 @@
     <link rel="preload" href="{{ 'CormorantGaramond-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-    {% render 'header' %}
+    <div id="modal" style="display: none;">
+        <p id="modal-text">Modal window</p>
+    </div>
     <div class="wrapper">
+        {% render 'header' %}
         {% block content %}{% endblock %}
     </div>
     <p class="width-text">

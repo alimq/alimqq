@@ -42,3 +42,24 @@
         padding-top: 13vw !important;
     }
 }
+#modal.visible {
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    width: 80%;
+    aspect-ratio: 1/1;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrapper.is-background {
+    opacity: 0.5;
+}
