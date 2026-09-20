@@ -1,5 +1,5 @@
 {{ 'hero-right-menu.css' | asset_url | stylesheet_tag }}
-<img class="hero-right-menu" src="{{ 
+<img id="popup-menu-btn" class="hero-right-menu" src="{{ 
     'hero-right-menu.svg' | asset_url }}">
 <div class="hero-full-right-menu">
     <ul>
@@ -8,3 +8,18 @@
         <li><a href="/contacts">Contacts</a></li>
     </ul>
 </div>
+<script>
+    const popupEl=document.getElementById('popup-menu');
+    const popupMenuBtn=document.getElementById('popup-menu-btn');
+    function popupHandle() {
+        popupEl.classList.add('visible');
+    }
+    popupMenuBtn.addEventListener('click',popupHandle);
+    document.addEventListener('click', (event) => {
+        const isClickInside=popupEl.contains(event.target);
+        const isClickOnOpenBtn=popupMenuBtn.contains(event.target);
+        if(!isClickInside && !isClickOnOpenBtn) {
+            popupEl.classList.remove('visible');
+        }
+    });
+</script>
