@@ -37,7 +37,7 @@
     padding-top: 10px;
     box-sizing: border-box;
 }
-.hero .hero-cta .cta-p {
+.cta-p {
     margin-top: 0;
     text-align: center;
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
@@ -54,7 +54,7 @@
     margin: auto;
 }
 @media (min-width: 162px) and (max-width: 699px) {
-    .hero .hero-cta .cta-p {
+    .cta-p {
         font-size: 18px !important;
         margin-bottom: 9px !important;
     }
@@ -71,7 +71,7 @@
     }
 }
 @media (min-width: 420px) and (max-width: 4096px) {
-    .hero .hero-cta .cta-p {
+    .cta-p {
         font-size: 3vw;
         margin-bottom: 1.5vw;
     }

@@ -7,7 +7,7 @@
 @media (min-width: 162px) and (max-width: 419px) {
     .hero .container {
         flex-direction: column;
-        padding-top: 50px;
+        padding-top: 25px;
         padding-left: 10px;
         padding-right: 10px;
         gap: 8vw;
@@ -23,7 +23,7 @@
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        padding-top: 9.5vw;
+        padding-top: 4vw;
         gap: 8vw;
     }
     .hero .container .block-1 {
@@ -64,7 +64,7 @@
 .wrapper.is-background {
     opacity: 0.5;
 }
-#modal .btn-pic {
+.btn-pic {
     width: 30px;
     aspect-ratio: auto;
 }
@@ -72,7 +72,7 @@
     margin: 0;
     text-align: center;
 }
-#modal .send-btn {
+.send-btn {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,12 +92,12 @@
         gap: 1.5vw !important;
         box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
     }
-    #modal .send-btn {
+    .send-btn {
         font-size: 2vw !important;
         padding: 1.5vw !important;
         gap: 2vw !important;
     }
-    #modal .btn-pic {
+    .btn-pic {
         width: 3vw !important;
     }
 }

@@ -1,2 +1,19 @@
 {% layout default_layout %}
-<h1>Contacts</h1>
+{% block content %}
+    {{ 'hero-cta.css' | asset_url | stylesheet_tag }}
+    {{ 'hero.css' | asset_url | stylesheet_tag }}
+    {{ 'contacts.css' | asset_url | stylesheet_tag }}
+    <div class="hero">
+        <div class="container">
+            <div class="cta-div">
+                <p class="cta-p">Let's</p>  
+                <a target="_blank"
+                 href="https://www.linkedin.com/in/alim-imanmalik/">
+                <button class="send-btn">
+                connect on<img class="btn-pic" src="{{ 'linkedin.svg' | asset_url }}">
+                </button></a><p class="cta-p">!</p>
+            </div>
+            <p class="cta-p cta-paragraph">In case our networks can help each other</p>
+        </div>
+    </div>
+{% endblock %}
