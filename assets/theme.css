@@ -71,12 +71,26 @@ a:visited,a:hover,a:active {
 }
 @media (max-width: 420px) {
     #popup-menu.visible {
-        aspect-ratio: 1/1;
+        aspect-ratio: 1/0.5;
+        width: 80%;
+        font-size: 3vw;
+        top: 1.5vw;
+    }
+}
+@media (max-width: 240px) {
+    #popup-menu.visible {
+        aspect-ratio: 1/0.8;
+        width: 80%;
+        font-size: 13px;
+        top: 1.5vw;
     }
 }
 @media (min-width: 700px) {
     #popup-menu.visible {
         aspect-ratio: 1/0.3;
+        width: 50%;
+        font-size: 2vw;
+        top: 1.5vw;
     }
 }
 #popup-menu ul {
