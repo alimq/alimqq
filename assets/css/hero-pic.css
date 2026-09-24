@@ -1,0 +1,20 @@
+.hero .hero-pic {
+    height: 250px;
+    border-radius: 100%;
+}
+.hero .hero-pic img {
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
+}
+@media (min-width: 162px) and (max-width: 419px) {
+    .hero .hero-pic {
+        height: 140px;
+        margin: auto;
+    }
+}
+@media (min-width: 420px) and (max-width: 4096px) {
+    .hero .hero-pic {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+}

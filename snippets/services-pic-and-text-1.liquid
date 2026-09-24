@@ -1,0 +1,16 @@
+{{ 'css/services-pic-and-text.css' | asset_url | stylesheet_tag }}
+<p class="cta-p">
+    Bug Free & High Performance
+</p>
+<picture class="pic-1">
+    <source media="(max-width: 419px)"
+    srcset="{{ 'bug-free.svg' | asset_url }}">
+    <source media="(min-width: 420px) and (max-width: 699px)"
+    srcset="{{ 'bug-free.png' | asset_url }}">
+    <img src="{{ 'bug-free.png' | asset_url }}" class="pic-1">
+</picture>
+<div class="video-1">
+    <video muted autoplay loop class="video-1"
+    src="{{ 'bug-free.mp4' | asset_url }}">
+    </video>
+</div>

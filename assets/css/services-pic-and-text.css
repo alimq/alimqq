@@ -1,0 +1,36 @@
+/* @media (max-width: 419px) { */
+    .pic-1, .pic-2 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .pic-1 img, .pic-2 img {
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+/* } */
+@media (min-width: 420px) {
+    .pic-1, .pic-2 {
+        height: 42.5vw;
+    }
+}
+@media (max-width: 699px) {
+    .video-1 {
+        display: none;   
+    }
+}
+@media (min-width: 700px) {
+    .pic-1 {
+        display: none;
+    }
+    .video-1 {
+        height: 42.5vw !important;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+    .video-1 video {
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+}

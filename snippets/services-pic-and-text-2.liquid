@@ -1,0 +1,11 @@
+{{ 'css/services-pic-and-text.css' | asset_url | stylesheet_tag }}
+<p class="cta-p">
+    Pixel-perfect Figma to Code
+</p>
+<picture class="pic-2">
+    <source media="(max-width: 419px)"
+    srcset="{{ 'pixel-perfect.svg' | asset_url }}">
+    <source media="(min-width: 420px) and (max-width: 699px)"
+    srcset="{{ 'pixel-perfect.png' | asset_url }}">
+    <img src="{{ 'pixel-perfect.png' | asset_url }}" class="pic-2">
+</picture>

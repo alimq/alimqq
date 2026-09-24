@@ -3,7 +3,7 @@
 <head>
     <title>Alimqq, Shopify Dev - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{ 'theme.css' | asset_url | stylesheet_tag }}
+    {{ 'css/theme.css' | asset_url | stylesheet_tag }}
     <link rel="preload" href="{{ 'Inter_18pt-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ 'CormorantGaramond-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 </head>
@@ -42,8 +42,8 @@
             Contacts</li></a>
         </ul>
     </div>
+    {% render 'header' %}
     <div class="wrapper">
-        {% render 'header' %}
         {% block content %}{% endblock %}
     </div>
     <p class="width-text">

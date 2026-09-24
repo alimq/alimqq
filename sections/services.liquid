@@ -1,0 +1,12 @@
+{{ 'css/hero.css' | asset_url | stylesheet_tag }}
+{{ 'css/services.css' | asset_url | stylesheet_tag }}
+<div class="hero services">
+    <div class="container">
+        <div class="pic-and-text">
+            {% render 'services-pic-and-text-1' %}
+        </div>
+        <div class="pic-and-text">
+            {% render 'services-pic-and-text-2' %}
+        </div>
+    </div>
+</div>
