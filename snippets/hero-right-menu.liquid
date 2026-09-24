@@ -12,13 +12,19 @@
     const popupEl2=document.getElementById('popup-menu');
     const popupMenuBtn=document.getElementById('popup-menu-btn');
     function popupHandle() {
-        popupEl2.classList.add('visible');
+        event.stopPropagation();
+        if (popupEl2.classList.contains('visible')) {
+            popupEl2.classList.remove('visible');
+        }   else {
+            popupEl2.classList.add('visible');
+        }
     }
     popupMenuBtn.addEventListener('click',popupHandle);
     document.addEventListener('click', (event) => {
         const isClickInside=popupEl2.contains(event.target);
         const isClickOnOpenBtn=popupMenuBtn.contains(event.target);
-        if(!isClickInside && !isClickOnOpenBtn) {
+        if(!isClickInside || (isClickOnOpenBtn && 
+        popupEl2.classList.contains('visible'))) {
             popupEl2.classList.remove('visible');
         }
     });

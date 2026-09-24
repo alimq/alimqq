@@ -69,12 +69,12 @@ a:visited,a:hover,a:active {
     align-items: center;
     justify-content: center;
 }
-@media (max-width: 420px) {
+@media (max-width: 419px) {
     #popup-menu.visible {
         aspect-ratio: 1/0.5;
         width: 80%;
         font-size: 3vw;
-        top: 1.5vw;
+        top: 40px;
     }
 }
 @media (max-width: 240px) {
@@ -82,15 +82,28 @@ a:visited,a:hover,a:active {
         aspect-ratio: 1/0.8;
         width: 80%;
         font-size: 13px;
-        top: 1.5vw;
+        top: 40px;
     }
 }
-@media (min-width: 700px) {
+#popup-menu ul a {
+    text-decoration-line: underline;
+    text-decoration-color: #fe8a69;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+@media (min-width: 420px) {
     #popup-menu.visible {
         aspect-ratio: 1/0.3;
         width: 50%;
         font-size: 2vw;
-        top: 1.5vw;
+        top: 9vw;
+        box-sizing: border-box;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+    }
+    #popup-menu ul a {
+        text-decoration-thickness: 0.4vw;
+        text-underline-offset: 0.6vw;
     }
 }
 #popup-menu ul {
