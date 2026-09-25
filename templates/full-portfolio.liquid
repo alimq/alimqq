@@ -1,45 +1,4 @@
 {% layout default_layout %}
 {% block content %}
-    {{ 'css/hero-cta.css' | asset_url | stylesheet_tag }}
-    {{ 'css/hero.css' | asset_url | stylesheet_tag }}
-    {{ 'css/full-portfolio.css' | asset_url | stylesheet_tag }}
-    <div class="hero">
-        <div class="hero-wrapper">
-            <p class="cta-p">
-            Password on all is - alimqq
-            </p>
-            <div class="container">
-                <a target="_blank" href="https://tealand-sep-14-i7j8qdux.myshopify.com/">
-                    <picture class="portfolio-pic">
-                        <source media="(max-width: 419px)" srcset="
-                        {{ 'site1.svg' | asset_url }}">
-                        <source media="(min-width: 420px)" srcset="
-                        {{ 'site1.png' | asset_url }}">
-                        <img class="portfolio-pic" src="
-                        {{ 'site1.png' | asset_url }}">
-                    </picture>
-                </a>
-                <a target="_blank" href="https://lanah-designs-c1k7r9pi.myshopify.com/">
-                    <picture class="portfolio-pic">
-                        <source media="(max-width: 419px)" srcset="
-                        {{ 'site2.svg' | asset_url }}">
-                        <source media="(min-width: 420px)" srcset="
-                        {{ 'site2.png' | asset_url }}">
-                        <img class="portfolio-pic" src="
-                        {{ 'site2.png' | asset_url }}">
-                    </picture>
-                </a>
-                <a target="_blank" href="https://sketch-shirts-gfsm06q0.myshopify.com/">
-                    <picture class="portfolio-pic">
-                        <source media="(max-width: 419px)" srcset="
-                        {{ 'site3.svg' | asset_url }}">
-                        <source media="(min-width: 420px)" srcset="
-                        {{ 'site3.png' | asset_url }}">
-                        <img class="portfolio-pic" src="
-                        {{ 'site3.png' | asset_url }}">
-                    </picture>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% render 'portfolio' %}
 {% endblock %}
