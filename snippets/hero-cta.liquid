@@ -1,28 +1,34 @@
 {{ 'css/hero-cta.css' | asset_url | stylesheet_tag | safe }}
 <div class="hero-cta">
     <p class="cta-p">
-        Build My Shopify Store With High Precision
+        Custom-coded Shopify stores - faster, fewer apps, fully editable
     </p>
     <div class="cta-block">
         <ul>
             <li>
             <input class="checkbox-service" type="checkbox"
-             data-price="100" data-name="Mobile Responsive"> Mobile Responsive</li>
+             data-price="30" data-name="Fix/bug in a theme"> Fix/bug in a theme</li>
             <li>
             <input class="checkbox-service" type="checkbox" 
-            data-price="50" data-name="SEO & Speed Ready"> SEO & Speed Ready</li>
+            data-price="60" data-name="Simple section"> Simple section</li>
             <li>
-            <input class="checkbox-service" type="checkbox" 
-            data-price="25" data-name="Custom Liquid"> Custom Liquid</li>
+            <li><input class="checkbox-service" type="checkbox" 
+            data-price="300" data-name="Dynamic feature"> Dynamic feature</li>
+            <li><input class="checkbox-service" type="checkbox" 
+            data-price="600" data-name="Native section"> Replace app with native sections</li>
+            <li><input class="checkbox-service" type="checkbox" 
+            data-price="150" data-name="Speed optimization"> Speed optimization</li>
+            <li><input class="checkbox-service" type="checkbox" 
+            data-price="500" data-name="Shop based on Figma"> Shop based on Figma</li>
         </ul>
         <p class="cta-price">
-            Starting from $<span id="total-price">100</span>
+            Starting from $<span id="total-price">0</span>
         </p>
         <button class="cta-talk" id="cta-talk">
-            Let's talk
+            Hire me on Upwork
         </button>
         <script>
-            const basePrice=100;
+            const basePrice=0;
             const checkboxes=document.querySelectorAll('.checkbox-service');
             const totalPriceEl=document.getElementById('total-price');
             function calcT() {
