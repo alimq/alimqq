@@ -1,0 +1,19 @@
+.cta-paragraph {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px !important;
+}
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 420px) {
+    .cta-paragraph {
+        font-size: 1.5vw !important;
+        max-width: 60%;
+    }
+}
