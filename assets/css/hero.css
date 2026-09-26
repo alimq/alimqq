@@ -42,7 +42,7 @@
         padding-top: 8vw !important;
     }
 }
-#modal.visible {
+.modal-type.visible {
     position: fixed;
     display: flex !important;
     flex-direction: column;
@@ -68,7 +68,7 @@
     width: 30px;
     aspect-ratio: auto;
 }
-#modal p {
+.modal-type p {
     margin: 0;
     text-align: center;
 }
@@ -85,7 +85,7 @@
     cursor: pointer;
 }
 @media (min-width: 700px) {
-    #modal {
+    .modal-type {
         width: 40% !important;
         font-size: 2vw !important;
         padding: 1.5vw !important;
@@ -102,7 +102,7 @@
     }
 }
 @media (min-width: 1280px) {
-    #modal {
+    .modal-type {
         width: 25% !important;
     }
 }

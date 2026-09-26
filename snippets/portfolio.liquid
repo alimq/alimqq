@@ -4,10 +4,10 @@
 <div class="hero portfolio">
     <div class="hero-wrapper">
         <p class="cta-p">
-        Password on all is - alimqq
+        Portfolio
         </p>
         <div class="container">
-            <a target="_blank" href="https://tealand-sep-14-i7j8qdux.myshopify.com/">
+            <a class="site-link" href="javascript:void(0)" data-link="https://tealand-sep-14-i7j8qdux.myshopify.com/">
                 <picture class="portfolio-pic">
                     <source media="(max-width: 419px)" srcset="
                     {{ 'site1.svg' | asset_url }}">
@@ -17,7 +17,7 @@
                     {{ 'site1.png' | asset_url }}">
                 </picture>
             </a>
-            <a target="_blank" href="https://lanah-designs-c1k7r9pi.myshopify.com/">
+            <a class="site-link" href="javascript:void(0)" data-link="https://lanah-designs-c1k7r9pi.myshopify.com/">
                 <picture class="portfolio-pic">
                     <source media="(max-width: 419px)" srcset="
                     {{ 'site2.svg' | asset_url }}">
@@ -27,7 +27,7 @@
                     {{ 'site2.png' | asset_url }}">
                 </picture>
             </a>
-            <a target="_blank" href="https://sketch-shirts-gfsm06q0.myshopify.com/">
+            <a class="site-link" href="javascript:void(0)" data-link="https://sketch-shirts-gfsm06q0.myshopify.com/">
                 <picture class="portfolio-pic">
                     <source media="(max-width: 419px)" srcset="
                     {{ 'site3.svg' | asset_url }}">
@@ -40,3 +40,33 @@
         </div>
     </div>
 </div>
+<script>
+    const popupEl3=document.getElementById('modal-2');
+    const wrapper3=document.querySelectorAll('.wrapper')[0];
+    const siteLinks3=document.querySelectorAll('.site-link');
+    const link=document.getElementById('site-link-2');
+    function siteHandle(event) {
+        if(!popupEl3.classList.contains('visible')) {
+            event.preventDefault();
+            event.stopPropagation();
+            const el = event.currentTarget;
+            const text1 = el.dataset.link;
+            let text2="alimqq";
+            navigator.clipboard.writeText(text2);
+            popupEl3.classList.add('visible');
+            wrapper3.classList.add('is-background');
+            link.href=text1;
+        }
+    }
+    siteLinks3.forEach((siteLink) => {
+        siteLink.addEventListener('click',siteHandle);
+        document.addEventListener('click', (event) => {
+            const isClickInside=popupEl3.contains(event.target);
+            const isClickOnOpenBtn=siteLink.contains(event.target);
+            if(!isClickInside && !isClickOnOpenBtn) {
+                popupEl3.classList.remove('visible');
+                wrapper3.classList.remove('is-background');
+            }
+        });
+    });
+</script>

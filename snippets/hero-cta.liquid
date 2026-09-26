@@ -47,6 +47,8 @@
             const telegram=document.getElementById('telegram-link');
             const gmail=document.getElementById('gmail-link');
             function talkHandle() {
+                event.preventDefault();
+                event.stopPropagation();
                 let text="";
                 checkboxes.forEach(checkbox => {
                     if(checkbox.checked) {

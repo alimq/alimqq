@@ -1,4 +1,13 @@
+.services .cta-p.main {
+    text-decoration-line: underline;
+    text-decoration-color: #fe8a69;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
 @media (min-width: 420px) {
-    
+    .services .cta-p.main {
+        text-decoration-thickness: 0.4vw;
+        text-underline-offset: 0.6vw;
+    }
 }
     

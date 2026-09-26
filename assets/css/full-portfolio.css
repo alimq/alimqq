@@ -1,6 +1,7 @@
 .portfolio-pic img {
     width: 140px;
     aspect-ratio: auto;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
 }
 .portfolio .container {
     display: flex;
@@ -8,9 +9,24 @@
     align-items: center;
     justify-content: center;
 }
+.portfolio .cta-p {
+    text-decoration-line: underline;
+    text-decoration-color: #fe8a69;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+@media (min-width: 700px) {
+    .portfolio-pic img {
+        box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
+    }
+}
 @media (min-width: 420px) {
     .portfolio-pic img {
         width: 100%;
+    }
+    .portfolio .cta-p {
+        text-decoration-thickness: 0.4vw;
+        text-underline-offset: 0.6vw;
     }
     .portfolio .container {
         padding-left: 3vw;

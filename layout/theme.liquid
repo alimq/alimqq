@@ -8,27 +8,37 @@
     <link rel="preload" href="{{ 'CormorantGaramond-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
-    <div id="modal" style="display: none;">
+    <div class="modal-type" id="modal" style="display: none;">
         <p id="modal-text"></p>
-        <a href="#" target="_blank" id="whatsapp-link">
+        <a href="javascript:void(0)" target="_blank" id="whatsapp-link">
             <button class="send-btn">
                 Send to <img src="{{ 
                     'whatsapp.svg' | asset_url }}"
                     class="btn-pic">
             </button>
         </a>
-        <a href="#" target="_blank" id="telegram-link">
+        <a href="javascript:void(0)" target="_blank" id="telegram-link">
             <button class="send-btn">
                 Send to <img src="{{ 
                     'telegram.svg' | asset_url }}"
                     class="btn-pic">
             </button>
         </a>
-        <a href="#" target="_blank" id="gmail-link">
+        <a href="javascript:void(0)" target="_blank" id="gmail-link">
             <button class="send-btn">
                 Send to <img src="{{ 
                     'gmail.svg' | asset_url }}"
                     class="btn-pic">
+            </button>
+        </a>
+    </div>
+    <div class="modal-type" id="modal-2" style="display: none;">
+        <p id="modal-text-2">
+            Copied password "alimqq" to clipboard!
+        </p>
+        <a href="javascript:void(0)" target="_blank" id="site-link-2">
+            <button class="send-btn">
+                Go to site
             </button>
         </a>
     </div>

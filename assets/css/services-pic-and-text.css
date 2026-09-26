@@ -3,6 +3,7 @@
         width: 100%;
         height: auto;
         overflow: hidden;
+        box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     }
     .pic-1 img, .pic-2 img {
         object-fit: cover;
@@ -28,6 +29,10 @@
         width: 100%;
         height: auto;
         overflow: hidden;
+        box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
+    }
+    .pic-2 {
+        box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
     }
     .video-1 video {
         object-fit: cover;
