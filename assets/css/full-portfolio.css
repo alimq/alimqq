@@ -31,8 +31,8 @@
     .portfolio .container {
         padding-left: 3vw;
         padding-right: 3vw;
-        display: grid !important;
-        grid-template-columns: repeat(3,1fr) !important;
+        /* display: grid !important; */
+        /* grid-template-columns: repeat(3,1fr) !important; */
     }
 }
 @media (min-width: 162px) and (max-width: 419px) {

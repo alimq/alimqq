@@ -7,6 +7,7 @@
         Portfolio
         </p>
         <div class="container">
+            {% comment %}
             <a class="site-link" href="javascript:void(0)" data-link="https://tealand-sep-14-i7j8qdux.myshopify.com/">
                 <picture class="portfolio-pic">
                     <source media="(max-width: 419px)" srcset="
@@ -17,6 +18,14 @@
                     {{ 'site1.png' | asset_url }}">
                 </picture>
             </a>
+            {% endcomment %}
+            
+            <div class="video-1">
+                <video controls muted preload="none" class="video-1"
+                src="{{ 'demo.mp4' | asset_url }}" poster="{{ 'demo.png' | asset_url }}">
+                </video>
+            </div>
+            {% comment %}
             <a class="site-link" href="javascript:void(0)" data-link="https://lanah-designs-c1k7r9pi.myshopify.com/">
                 <picture class="portfolio-pic">
                     <source media="(max-width: 419px)" srcset="
@@ -37,6 +46,7 @@
                     {{ 'site3.png' | asset_url }}">
                 </picture>
             </a>
+            {% endcomment %}
         </div>
     </div>
 </div>

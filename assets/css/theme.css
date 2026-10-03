@@ -14,6 +14,9 @@
     src: url('/assets/CormorantGaramond-Regular.woff') format('woff'),
         url('/assets/CormorantGaramond-Regular.woff2') format('woff2');
 }
+video::-webkit-media-controls-panel {
+    background-image: none !important;
+}
 @media (max-width: 161px) {
     .wrapper, .header {
         display: none !important;
