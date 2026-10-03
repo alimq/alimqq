@@ -17,6 +17,30 @@
 video::-webkit-media-controls-panel {
     background-image: none !important;
 }
+select {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font: inherit;
+    color: inherit;
+}
+select, select option {
+    max-width: 100%;
+    width: 100%;
+}
+select option {
+    white-space: normal;
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+select option:checked {
+    background: linear-gradient(#fe8a69,#fe8a69);
+}
+select:focus {
+    outline: none;
+}
 @media (max-width: 161px) {
     .wrapper, .header {
         display: none !important;
