@@ -4,13 +4,9 @@
 .hero .container .block-2 {
     display: flex;
 }
-@media (min-width: 162px) and (max-width: 419px) {
+@media (max-width: 419px) {
     .hero .container {
         flex-direction: column;
-        padding-top: 25px;
-        padding-left: 10px;
-        padding-right: 10px;
-        gap: 8vw;
     }
     .hero .container .block-1 {
         display: flex;
@@ -23,8 +19,7 @@
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        padding-top: 4vw;
-        gap: 8vw;
+        gap: 3vw;
     }
     .hero .container .block-1 {
         display: none;
@@ -39,7 +34,7 @@
 }
 @media (min-width: 420px) and (max-width: 699px) {
     .hero .container {
-        padding-top: 8vw !important;
+        
     }
 }
 .modal-type.visible {
@@ -55,11 +50,8 @@
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #ffffff;
-    /* border: 1px solid black; */
     box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     box-sizing: border-box;
-    padding: 10px;
-    gap: 10px;
 }
 .wrapper.is-background {
     opacity: 0.5;
@@ -79,23 +71,15 @@
     justify-content: center;
     background-color: #fe8a69;
     border: none;
-    padding: 10px;
     box-sizing: border-box;
-    gap: 15px;
     cursor: pointer;
 }
 @media (min-width: 700px) {
     .modal-type {
         width: 40% !important;
-        font-size: 2vw !important;
-        padding: 1.5vw !important;
-        gap: 1.5vw !important;
         box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
     }
     .send-btn {
-        font-size: 2vw !important;
-        padding: 1.5vw !important;
-        gap: 2vw !important;
     }
     .btn-pic {
         width: 3vw !important;

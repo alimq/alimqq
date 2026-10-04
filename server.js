@@ -45,4 +45,39 @@ app.get('/contacts', (req, res) => {
     res.render('contacts', {});
 });
 
+app.get('/work/:name', (req, res) => {
+    let work=req.params.name;
+    let arr=['tealand','lanah-designs','sketch-shirts'];
+    let dict={
+        'tealand': {
+            'name': 'TEALAND',
+            'link': 'https://tealand-sep-14-i7j8qdux.myshopify.com/',
+            'poster': 'demo.png',
+            'video': 'demo.mp4',
+            'type': 'Shopify',
+            'what-i-did': 'Made responsive designs and built the website'
+        },
+        'lanah-designs': {
+            'name': 'Lanah Designs',
+            'link': 'https://lanah-designs-c1k7r9pi.myshopify.com/',
+            'poster': 'lanah.png',
+            'video': 'lanah.mp4',
+            'type': 'Shopify',
+            'what-i-did': 'Made responsive designs and built the website'
+        },
+        'sketch-shirts': {
+            'name': 'Sketch Shirts',
+            'link': 'https://sketch-shirts-gfsm06q0.myshopify.com/',
+            'poster': 'sketch.png',
+            'video': 'sketch.mp4',
+            'type': 'Shopify',
+            'what-i-did': 'Made responsive designs and built the website'
+        }
+    }
+    if(arr.includes(work))
+        res.render('work', { work: dict[work] });
+    else
+        res.status(404);
+});
+
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));

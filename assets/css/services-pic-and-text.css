@@ -4,6 +4,7 @@
         height: auto;
         overflow: hidden;
         box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
+        margin-top: 2px;
     }
     .pic-1 img, .pic-2 img {
         object-fit: cover;
@@ -13,6 +14,7 @@
 @media (min-width: 420px) {
     .pic-1, .pic-2 {
         height: 42.5vw;
+        margin-top: 0.5vw;
     }
 }
 .video-1 {

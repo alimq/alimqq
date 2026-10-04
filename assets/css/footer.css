@@ -1,3 +1,11 @@
 .footer {
     background-color: #fe8a69;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+@media (min-width: 420px) {
+    .footer {
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
 }

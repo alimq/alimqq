@@ -1,0 +1,22 @@
+{% layout default_layout %}
+{% block content %}
+    {{ 'css/hero-cta.css' | asset_url | stylesheet_tag }}
+    {{ 'css/hero.css' | asset_url | stylesheet_tag }}
+    {{ 'css/work.css' | asset_url | stylesheet_tag }}
+    <div class="hero">
+        <div class="container">
+            <div class="video-1">
+                <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
+                <video controls muted preload="none" class="video-1"
+                src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">
+                </video>
+                <p class="cta-paragraph">{{ work.what-i-did }}</p>
+                <a target="_blank" href="{{ work.link }}">
+                    <button class="cta-talk">
+                        Go to site
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
