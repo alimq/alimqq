@@ -4,49 +4,34 @@
 <div class="hero portfolio">
     <div class="hero-wrapper">
         <p class="cta-p subtitle">
-        Portfolio
+        TEALAND, an example from portfolio
         </p>
         <div class="container">
-            {% comment %}
-            <a class="site-link" href="javascript:void(0)" data-link="https://tealand-sep-14-i7j8qdux.myshopify.com/">
-                <picture class="portfolio-pic">
-                    <source media="(max-width: 419px)" srcset="
-                    {{ 'site1.svg' | asset_url }}">
-                    <source media="(min-width: 420px)" srcset="
-                    {{ 'site1.png' | asset_url }}">
-                    <img class="portfolio-pic" src="
-                    {{ 'site1.png' | asset_url }}">
-                </picture>
-            </a>
-            {% endcomment %}
-            
             <div class="video-1">
                 <video controls muted preload="none" class="video-1"
                 src="{{ 'demo.mp4' | asset_url }}" poster="{{ 'demo.png' | asset_url }}">
                 </video>
             </div>
-            {% comment %}
-            <a class="site-link" href="javascript:void(0)" data-link="https://lanah-designs-c1k7r9pi.myshopify.com/">
-                <picture class="portfolio-pic">
-                    <source media="(max-width: 419px)" srcset="
-                    {{ 'site2.svg' | asset_url }}">
-                    <source media="(min-width: 420px)" srcset="
-                    {{ 'site2.png' | asset_url }}">
-                    <img class="portfolio-pic" src="
-                    {{ 'site2.png' | asset_url }}">
-                </picture>
-            </a>
-            <a class="site-link" href="javascript:void(0)" data-link="https://sketch-shirts-gfsm06q0.myshopify.com/">
-                <picture class="portfolio-pic">
-                    <source media="(max-width: 419px)" srcset="
-                    {{ 'site3.svg' | asset_url }}">
-                    <source media="(min-width: 420px)" srcset="
-                    {{ 'site3.png' | asset_url }}">
-                    <img class="portfolio-pic" src="
-                    {{ 'site3.png' | asset_url }}">
-                </picture>
-            </a>
-            {% endcomment %}
+            <div class="buttons">
+                <a target="_blank" href="work/tealand">
+                    <button class="cta-talk">
+                        Go to page
+                    </button>
+                </a>
+                <form style="display: inline" method="post" target="_blank" action="https://tealand-sep-14-i7j8qdux.myshopify.com/password">
+                    <input type="hidden" name="form_type" value="storefront_password">
+                    <input type="hidden" name="password" value="alimqq">
+                    <input type="hidden" name="utf8" value="alimqq">
+                    <button class="cta-talk" type="submit">
+                        Go to site
+                    </button>
+                </form>
+                <a target="_blank" href="full-portfolio">
+                    <button class="cta-talk">
+                        Go to portfolio
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
