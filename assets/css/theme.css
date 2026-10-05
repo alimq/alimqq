@@ -206,3 +206,25 @@ select:focus {
         padding-top: 1.67vw;
     }
 }
+.video-1 {
+    position: relative;
+    cursor: pointer;
+}
+.play-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.play-pause img {
+    width: 32px;
+    height: auto;
+}
+@media (min-width: 420px) {
+    .play-pause img {
+        width: 8vw;
+    }
+}
+.video-pause.hidden,.video-play.hidden {
+    display: none;
+}

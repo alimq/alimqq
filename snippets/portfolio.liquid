@@ -8,9 +8,17 @@
         </p>
         <div class="container">
             <div class="video-1">
-                <video controls muted preload="none" class="video-1"
+                <video muted preload="none" class="video-1"
                 src="{{ 'demo.mp4' | asset_url }}" poster="{{ 'demo.png' | asset_url }}">
                 </video>
+                <button class="play-pause">
+                    <img class="video-play" src="{{
+                        'play.svg' | asset_url
+                    }}">
+                    <img class="video-pause hidden" src="{{
+                        'pause.svg' | asset_url
+                    }}">
+                </button>
             </div>
             <div class="buttons">
                 <a target="_blank" href="work/tealand">
@@ -35,3 +43,21 @@
         </div>
     </div>
 </div>
+<script>
+    let videos=document.querySelectorAll('.video-1');
+    function handleClick(video) {
+        let pauseHidden=video.querySelector('.video-pause').classList.contains('hidden');
+        if(pauseHidden) {
+            video.querySelector('.video-pause').classList.remove('hidden');
+            video.querySelector('.video-play').classList.add('hidden');
+            video.querySelector('video').play();
+        }   else {
+            video.querySelector('.video-pause').classList.add('hidden');
+            video.querySelector('.video-play').classList.remove('hidden');
+            video.querySelector('video').pause();
+        }
+    }
+    videos.forEach(video => {
+        video.addEventListener('click',() => handleClick(video));
+    });
+</script>

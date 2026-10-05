@@ -1,0 +1,5 @@
+@media (max-width: 419px) {
+    .services .container {
+        gap: 12px;
+    }
+}
