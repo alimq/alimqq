@@ -2,6 +2,36 @@ const express = require('express');
 const { Liquid } = require('liquidjs');
 const path = require('path');
 
+const dict = {
+    'tealand': {
+        'name': 'TEALAND',
+        'link': 'https://tealand-sep-14-i7j8qdux.myshopify.com/',
+        'page': 'work/tealand',
+        'poster': 'demo.png',
+        'video': 'demo.mp4',
+        'type': 'Shopify',
+        'what-i-did': 'Made responsive designs and built the website'
+    },
+    'lanah-designs': {
+        'name': 'Lanah Designs',
+        'link': 'https://lanah-designs-c1k7r9pi.myshopify.com/',
+        'page': 'work/lanah-designs',
+        'poster': 'lanah.png',
+        'video': 'lanah.mp4',
+        'type': 'Shopify',
+        'what-i-did': 'Made responsive designs and built the website'
+    },
+    'sketch-shirts': {
+        'name': 'Sketch Shirts',
+        'link': 'https://sketch-shirts-gfsm06q0.myshopify.com/',
+        'page': 'work/sketch-shirts',
+        'poster': 'sketch.png',
+        'video': 'sketch.mp4',
+        'type': 'Shopify',
+        'what-i-did': 'Made responsive designs and built the website'
+    }
+};
+
 const app = express();
 
 const engine = new Liquid({
@@ -38,7 +68,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/full-portfolio', (req, res) => {
-    res.render('full-portfolio', {});
+    res.render('full-portfolio', {dict});
 });
 
 app.get('/contacts', (req, res) => {
@@ -48,32 +78,6 @@ app.get('/contacts', (req, res) => {
 app.get('/work/:name', (req, res) => {
     let work=req.params.name;
     let arr=['tealand','lanah-designs','sketch-shirts'];
-    let dict={
-        'tealand': {
-            'name': 'TEALAND',
-            'link': 'https://tealand-sep-14-i7j8qdux.myshopify.com/',
-            'poster': 'demo.png',
-            'video': 'demo.mp4',
-            'type': 'Shopify',
-            'what-i-did': 'Made responsive designs and built the website'
-        },
-        'lanah-designs': {
-            'name': 'Lanah Designs',
-            'link': 'https://lanah-designs-c1k7r9pi.myshopify.com/',
-            'poster': 'lanah.png',
-            'video': 'lanah.mp4',
-            'type': 'Shopify',
-            'what-i-did': 'Made responsive designs and built the website'
-        },
-        'sketch-shirts': {
-            'name': 'Sketch Shirts',
-            'link': 'https://sketch-shirts-gfsm06q0.myshopify.com/',
-            'poster': 'sketch.png',
-            'video': 'sketch.mp4',
-            'type': 'Shopify',
-            'what-i-did': 'Made responsive designs and built the website'
-        }
-    }
     if(arr.includes(work))
         res.render('work', { work: dict[work] });
     else

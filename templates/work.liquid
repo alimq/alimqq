@@ -3,20 +3,24 @@
     {{ 'css/hero-cta.css' | asset_url | stylesheet_tag }}
     {{ 'css/hero.css' | asset_url | stylesheet_tag }}
     {{ 'css/work.css' | asset_url | stylesheet_tag }}
-    <div class="hero">
+    {{ 'css/full-portfolio.css' | asset_url | stylesheet_tag }}
+    <div class="hero portfolio">
         <div class="container">
             <div class="video-1">
                 <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
                 <video controls muted preload="none" class="video-1"
                 src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">
                 </video>
-                <p class="cta-paragraph">{{ work.what-i-did }}</p>
-                <a target="_blank" href="{{ work.link }}">
-                    <button class="cta-talk">
-                        Go to site
-                    </button>
-                </a>
             </div>
+            <p class="cta-paragraph">{{ work.what-i-did }}</p>
+            <form style="display: inline" method="post" target="_blank" action="{{ work.link }}password">
+                <input type="hidden" name="form_type" value="storefront_password">
+                <input type="hidden" name="password" value="alimqq">
+                <input type="hidden" name="utf8" value="alimqq">
+                <button class="cta-talk" type="submit">
+                    Go to site (Password: alimqq)
+                </button>
+            </form>
         </div>
     </div>
 {% endblock %}
