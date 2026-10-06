@@ -20,7 +20,6 @@
                     }}">
                 </button>
             </div>
-            <p class="cta-paragraph">{{ work.what-i-did }}</p>
             <form style="display: inline" method="post" target="_blank" action="{{ work.link }}password">
                 <input type="hidden" name="form_type" value="storefront_password">
                 <input type="hidden" name="password" value="alimqq">
@@ -29,6 +28,13 @@
                     Go to site (Password: alimqq)
                 </button>
             </form>
+            <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+                <button class="cta-talk" id="cta-talk">
+                    Hire me on Upwork
+                    <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                </button>
+            </a>
+            <p class="cta-paragraph">{{ work.what-i-did }}</p>
         </div>
     </div>
     <script>

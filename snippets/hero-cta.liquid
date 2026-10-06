@@ -15,67 +15,11 @@
         <p class="cta-price">
             
         </p>
-        <button class="cta-talk" id="cta-talk">
-            Hire me on Upwork
-        </button>
-        <script>
-            const basePrice=0;
-            const checkboxes=document.querySelectorAll('.checkbox-service');
-            const totalPriceEl=document.getElementById('total-price');
-            function calcT() {
-                let total=basePrice;
-                checkboxes.forEach(checkbox => {
-                    if(checkbox.checked) {
-                        total+=parseFloat(checkbox.dataset.price);
-                    }
-                });
-                totalPriceEl.textContent=total;
-            }
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change',
-                calcT);
-            });
-
-            const ctaTalkEl=document.getElementById('cta-talk');
-            const popupEl=document.getElementById('modal');
-            const wrapper=document.querySelectorAll('.wrapper')[0];
-            const popupText=document.getElementById('modal-text');
-            const whatsapp=document.getElementById('whatsapp-link');
-            const telegram=document.getElementById('telegram-link');
-            const gmail=document.getElementById('gmail-link');
-            function talkHandle() {
-                event.preventDefault();
-                event.stopPropagation();
-                let text="";
-                checkboxes.forEach(checkbox => {
-                    if(checkbox.checked) {
-                        if(text=="") text=checkbox.dataset.name;
-                        else text+=" and " + checkbox.dataset.name;
-                    }
-                })
-                if(text=="") text="Hi! I want a website.";
-                else text = "Hi! I want a website that is " + text + ".";
-                navigator.clipboard.writeText(text);
-                popupEl.classList.add('visible');
-                wrapper.classList.add('is-background');
-                popupText.textContent='Copied to clipboard: "' + 
-                text + '"';
-                whatsapp.href = `https://wa.me/77078932196?text=` +
-                 encodeURIComponent(text);
-                telegram.href = `https://t.me/alim_qq?text=` + 
-                encodeURIComponent(text);
-                gmail.href = `https://mail.google.com/mail/?view=cm&fs=1&to=alimimanmalik2@gmail.com&su=Website&body=` + 
-                 encodeURIComponent(text);
-            }
-            ctaTalkEl.addEventListener('click',talkHandle);
-            document.addEventListener('click', (event) => {
-                const isClickInside=popupEl.contains(event.target);
-                const isClickOnOpenBtn=ctaTalkEl.contains(event.target);
-                if(!isClickInside && !isClickOnOpenBtn) {
-                    popupEl.classList.remove('visible');
-                    wrapper.classList.remove('is-background');
-                }
-            })
-        </script>
+        <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+            <button class="cta-talk" id="cta-talk">
+                Hire me on Upwork
+                <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+            </button>
+        </a>
     </div>
 </div>
