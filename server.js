@@ -1,6 +1,8 @@
 const express = require('express');
 const { Liquid } = require('liquidjs');
 const path = require('path');
+const fs = require('fs');
+
 
 const dict = {
     'tealand': {
@@ -42,6 +44,7 @@ const dict = {
 };
 
 const app = express();
+const css = fs.readFileSync(path.resolve(__dirname,'assets/bundle.css'),'utf8');
 
 const engine = new Liquid({
     root: [
@@ -53,7 +56,8 @@ const engine = new Liquid({
     layouts: path.resolve(__dirname, 'layout'),
     extname: '.liquid',
     globals: {
-        default_layout: 'theme.liquid'
+        default_layout: 'theme.liquid',
+        inline_css: css
     }
 });
 

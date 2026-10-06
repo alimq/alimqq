@@ -11,16 +11,14 @@ a:visited,a:hover,a:active {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/assets/Inter_18pt-Regular.woff') format('woff'),
-        url('/assets/Inter_18pt-Regular.woff2') format('woff2');
+    src: url('/assets/Inter-latin.woff2') format('woff2'),
 }
 @font-face {
     font-family: 'Cormorant Garamond';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/assets/CormorantGaramond-Regular.woff') format('woff'),
-        url('/assets/CormorantGaramond-Regular.woff2') format('woff2');
+    src: url('/assets/Cormorant-latin.woff2') format('woff2'),
 }
 .title {
     font-size: 18px;
