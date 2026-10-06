@@ -8,11 +8,15 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^10.0.5",
     "esbuild": "^0.28.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "esbuild assets/css/index.css --bundle --minify --outfile=assets/bundle.css --external:*.woff2 --external:*.woff"
+    "dev:css": "esbuild assets/css/index.css --bundle --minify --outfile=assets/bundle.css --external:*.woff2 --external:*.woff --external:*.svg --watch",
+    "dev": "concurrently \"npm run dev:css\" \"node --watch server.js\" \"browser-sync --port 4000 start --proxy 127.0.0.1:3000 --files assets/bundle.css,layout,templates,snippets,sections --no-inject-changes\"",
+    "build:css": "esbuild assets/css/index.css --bundle --minify --outfile=assets/bundle.css --external:*.woff2 --external:*.woff --external:*.svg"
   },
   "keywords": [],
   "author": "",

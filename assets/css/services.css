@@ -3,3 +3,9 @@
         gap: 12px;
     }
 }
+@media (min-width: 420px) {
+    .hero.services {
+        width: 90%;
+        margin: auto;
+    }
+}

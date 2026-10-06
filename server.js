@@ -57,7 +57,6 @@ const engine = new Liquid({
     extname: '.liquid',
     globals: {
         default_layout: 'theme.liquid',
-        inline_css: css
     }
 });
 
@@ -75,6 +74,14 @@ app.set('views', path.resolve(__dirname, 'templates'));
 app.set('view engine', 'liquid');
 
 app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
+const cssPath = path.resolve(__dirname,'assets/bundle.css');
+const isProd = process.env.NODE_ENV === 'production';
+const prodCss = isProd ? fs.readFileSync(cssPath, 'utf8') : '';
+
+app.use((req,res,next)=>{
+    res.locals.inline_css = isProd ? prodCss : fs.readFileSync(cssPath,'utf8');
+    next();
+});
 
 app.get('/', (req, res) => {
     res.render('index', {});

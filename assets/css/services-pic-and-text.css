@@ -3,12 +3,12 @@
         width: 100%;
         height: auto;
         overflow: hidden;
-        box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
         margin-top: 2px;
     }
     .pic-1 img, .pic-2 img {
         object-fit: cover;
         aspect-ratio: 1/1;
+        box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     }
 /* } */
 @media (min-width: 420px) {
@@ -17,6 +17,6 @@
         margin-top: 0.5vw;
     }
 }
-.pic-2 {
+.pic-2 img {
     box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
 }

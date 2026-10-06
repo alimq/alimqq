@@ -73,6 +73,7 @@ button {
     padding-left: 10px;
     padding-right: 10px;
     color: #000000;
+    font: inherit;
 }
 @media (max-width: 699px) {
     button {

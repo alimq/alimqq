@@ -1,5 +1,6 @@
 .hero .container {
     display: flex;
+    width: 100%;
 }
 .hero .container .block-2 {
     display: flex;

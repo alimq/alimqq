@@ -3,22 +3,25 @@
         Custom-coded Shopify stores - faster, fewer apps, fully editable
     </p>
     <div class="cta-block">
-        <select id="multiSelect" name="features" multiple size="">
-            <option value="option1">Fix/bug in a theme</option>
-            <option value="option2">Simple section</option>
-            <option value="option3">Dynamic feature</option>
-            <option value="option4">Replace app with native sections</option>
-            <option value="option5">Speed optimization</option>
-            <option value="option6">Shop based on Figma</option>
-        </select>
-        <p class="cta-price">
-            
-        </p>
-        <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+        <div class="fieldset">
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option1"> Fix/bug in a theme</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option2"> Simple section</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option3"> Dynamic feature</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option4"> Replace app with native sections</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option5"> Speed optimization</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option6"> Shop based on Figma</label>
+            <label><input class="checkbox-service" type="checkbox" name="features" value="option1"> Fix/bug in a theme</label>
+        </div>
+        <div class="buttons">
             <button class="cta-talk" id="cta-talk">
-                Hire me on Upwork
-                <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                See offer
             </button>
-        </a>
+            <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+                <button class="cta-talk" id="cta-talk">
+                    Hire me on Upwork
+                    <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                </button>
+            </a>
+        </div>
     </div>
 </div>

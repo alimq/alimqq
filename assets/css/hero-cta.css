@@ -35,3 +35,38 @@
         box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2);
     }
 }
+.hero .hero-cta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.hero .hero-cta input {
+    background-color: #fe8a69;
+    appearance: none;
+    cursor: pointer;
+}
+.hero .hero-cta input:checked {
+    background-image: url('/assets/checked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+}
+@media (max-width: 699px) {
+    .hero .hero-cta input {
+        width: 12px !important;
+        height: 12px !important;
+        margin-right: 8px !important;
+    }
+}
+@media (max-width: 4096px) {
+    .hero .hero-cta input {
+        width: 2vw;
+        height: 2vw;
+        margin-right: 1vw;
+    }
+}
+.fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
