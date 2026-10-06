@@ -7,9 +7,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "esbuild assets/css/index.css --bundle --minify --outfile=assets/bundle.css --external:*.woff2 --external:*.woff"
   },
   "keywords": [],
   "author": "",
