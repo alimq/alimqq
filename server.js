@@ -7,7 +7,7 @@ const dict = {
         'name': 'TEALAND',
         'link': 'https://tealand-sep-14-i7j8qdux.myshopify.com/',
         'page': 'work/tealand',
-        'poster': 'demo.png',
+        'poster': 'demo.webp',
         'video': 'demo.mp4',
         'type': 'Tea',
         'what-i-did': 'Problem: given Figma Desktop design, make a website that works on mobile too.\
@@ -19,7 +19,7 @@ const dict = {
         'name': 'Lanah Designs',
         'link': 'https://lanah-designs-c1k7r9pi.myshopify.com/',
         'page': 'work/lanah-designs',
-        'poster': 'lanah.png',
+        'poster': 'lanah.webp',
         'video': 'lanah.mp4',
         'type': 'Clothes',
         'what-i-did': 'Problem: given Figma Desktop design, match the Desktop website perfectly to it.\
@@ -31,7 +31,7 @@ const dict = {
         'name': 'Sketch Shirts',
         'link': 'https://sketch-shirts-gfsm06q0.myshopify.com/',
         'page': 'work/sketch-shirts',
-        'poster': 'sketch.png',
+        'poster': 'sketch.webp',
         'video': 'sketch.mp4',
         'type': 'Shirts',
         'what-i-did': "Problem: given Figma Desktop design, match the Desktop website perfectly to it.\
