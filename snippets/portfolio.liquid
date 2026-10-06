@@ -6,64 +6,109 @@
         <p class="cta-p subtitle">
         TEALAND, an example from portfolio
         </p>
-        <div class="container">
-            <div class="video-1">
-                <video muted preload="none" class="video-1"
-                src="{{ 'demo.mp4' | asset_url }}" poster="{{ 'demo.png' | asset_url }}">
-                </video>
-                <button class="play-pause">
-                    <img class="video-play" src="{{
-                        'play.svg' | asset_url
-                    }}">
-                    <img class="video-pause hidden" src="{{
-                        'pause.svg' | asset_url
-                    }}">
-                </button>
-            </div>
-            <div class="buttons">
-                <a target="_blank" href="work/tealand">
-                    <button class="cta-talk">
-                        See details
+        <div class="container item-container">
+            <div class="item">
+                <div class="video-1">
+                    <video muted preload="none" class="video-1"
+                    src="{{ 'demo.mp4' | asset_url }}" poster="{{ 'demo.png' | asset_url }}">
+                    </video>
+                    <button class="play-pause">
+                        <img class="video-play" src="{{
+                            'play.svg' | asset_url
+                        }}">
+                        <img class="video-pause hidden" src="{{
+                            'pause.svg' | asset_url
+                        }}">
                     </button>
-                </a>
-                <form style="display: inline" method="post" target="_blank" action="https://tealand-sep-14-i7j8qdux.myshopify.com/password">
-                    <input type="hidden" name="form_type" value="storefront_password">
-                    <input type="hidden" name="password" value="alimqq">
-                    <input type="hidden" name="utf8" value="alimqq">
-                    <button class="cta-talk" type="submit">
-                        Go to site (Password: alimqq)
-                    </button>
-                </form>
-                <a target="_blank" href="full-portfolio">
-                    <button class="cta-talk">
-                        Go to portfolio
-                    </button>
-                </a>
-                <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
-                    <button class="cta-talk" id="cta-talk">
-                        Hire me on Upwork
-                        <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
-                    </button>
-                </a>
+                </div>
+                <div class="buttons">
+                    <a target="_blank" href="work/tealand">
+                        <button class="cta-talk">
+                            See details
+                        </button>
+                    </a>
+                    <form style="display: inline" method="post" target="_blank" action="https://tealand-sep-14-i7j8qdux.myshopify.com/password">
+                        <input type="hidden" name="form_type" value="storefront_password">
+                        <input type="hidden" name="password" value="alimqq">
+                        <input type="hidden" name="utf8" value="alimqq">
+                        <button class="cta-talk" type="submit">
+                            Go to site (Password: alimqq)
+                        </button>
+                    </form>
+                    <a target="_blank" href="full-portfolio">
+                        <button class="cta-talk">
+                            Go to portfolio
+                        </button>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+                        <button class="cta-talk" id="cta-talk">
+                            Hire me on Upwork
+                            <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script>
     let videos=document.querySelectorAll('.video-1');
-    function handleClick(video) {
-        let pauseHidden=video.querySelector('.video-pause').classList.contains('hidden');
-        if(pauseHidden) {
-            video.querySelector('.video-pause').classList.remove('hidden');
-            video.querySelector('.video-play').classList.add('hidden');
-            video.querySelector('video').play();
-        }   else {
-            video.querySelector('.video-pause').classList.add('hidden');
-            video.querySelector('.video-play').classList.remove('hidden');
+    function videoIsPlaying(video) {
+        return (!video.querySelector('video').paused && !video.querySelector('video').ended && video.querySelector('video').readyState > 2);
+    }
+    function removePlayAddPauseButton(video) {
+        video.querySelector('.play-pause').classList.remove('hidden');
+        video.querySelector('.video-pause').classList.remove('hidden');
+        video.querySelector('.video-play').classList.add('hidden');
+    }
+    function removePauseAddPlayButton(video) {
+        video.querySelector('.play-pause').classList.remove('hidden');
+        video.querySelector('.video-pause').classList.add('hidden');
+        video.querySelector('.video-play').classList.remove('hidden');
+    }
+    function removeAllButtons(video) {
+        video.querySelector('.play-pause').classList.add('hidden');
+    }
+    function handleMouseClick(video) {
+        if(videoIsPlaying(video)) {
             video.querySelector('video').pause();
+            removePauseAddPlayButton(video);
+        }   else {
+            video.querySelector('video').play();
+            removePlayAddPauseButton(video);
+            setTimeout(() => removeAllButtons(video), 300);
         }
     }
-    videos.forEach(video => {
-        video.addEventListener('click',() => handleClick(video));
-    });
+    function handleMouseEnter(video) {
+        if(videoIsPlaying(video)) {
+            removePlayAddPauseButton(video);
+            setTimeout(() => removeAllButtons(video), 600);
+        }
+    }
+    function handleMouseLeave(video) {
+        if(videoIsPlaying(video)) {
+            removeAllButtons(video);
+        }
+    }
+    function handleTap(video) {
+        if(videoIsPlaying(video)) {
+            video.querySelector('video').pause();
+            removePauseAddPlayButton(video);
+        }   else {
+            video.querySelector('video').play();
+            removePlayAddPauseButton(video);
+            setTimeout(() => removeAllButtons(video), 300);
+        }
+    }
+    if(window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        videos.forEach(video => {
+            video.addEventListener('click',() => handleMouseClick(video));
+            video.addEventListener('mouseenter',() => handleMouseEnter(video));
+            video.addEventListener('mouseleave',() => handleMouseLeave(video));
+        });
+    }   else {
+        videos.forEach(video => {
+            video.addEventListener('click',() => handleTap(video));
+        });
+    }
 </script>

@@ -5,54 +5,101 @@
     {{ 'css/work.css' | asset_url | stylesheet_tag }}
     {{ 'css/full-portfolio.css' | asset_url | stylesheet_tag }}
     <div class="hero portfolio">
-        <div class="container">
-            <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
-            <div class="video-1">
-                <video muted preload="none" class="video-1"
-                src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">
-                </video>
-                <button class="play-pause">
-                    <img class="video-play" src="{{
-                        'play.svg' | asset_url
-                    }}">
-                    <img class="video-pause hidden" src="{{
-                        'pause.svg' | asset_url
-                    }}">
-                </button>
+        <div class="container item-container">
+            <div class="item">
+                <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
+                <div class="video-1">
+                    <video muted preload="none" class="video-1"
+                    src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">
+                    </video>
+                    <button class="play-pause">
+                        <img class="video-play" src="{{
+                            'play.svg' | asset_url
+                        }}">
+                        <img class="video-pause hidden" src="{{
+                            'pause.svg' | asset_url
+                        }}">
+                    </button>
+                </div>
+                <div class="buttons">
+                    <form style="display: inline" method="post" target="_blank" action="{{ work.link }}password">
+                        <input type="hidden" name="form_type" value="storefront_password">
+                        <input type="hidden" name="password" value="alimqq">
+                        <input type="hidden" name="utf8" value="alimqq">
+                        <button class="cta-talk" type="submit">
+                            Go to site (Password: alimqq)
+                        </button>
+                    </form>
+                    <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
+                        <button class="cta-talk" id="cta-talk">
+                            Hire me on Upwork
+                            <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                        </button>
+                    </a>
+                </div>
+                <p class="cta-paragraph">{{ work.what-i-did }}</p>
             </div>
-            <form style="display: inline" method="post" target="_blank" action="{{ work.link }}password">
-                <input type="hidden" name="form_type" value="storefront_password">
-                <input type="hidden" name="password" value="alimqq">
-                <input type="hidden" name="utf8" value="alimqq">
-                <button class="cta-talk" type="submit">
-                    Go to site (Password: alimqq)
-                </button>
-            </form>
-            <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
-                <button class="cta-talk" id="cta-talk">
-                    Hire me on Upwork
-                    <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
-                </button>
-            </a>
-            <p class="cta-paragraph">{{ work.what-i-did }}</p>
         </div>
     </div>
     <script>
         let videos=document.querySelectorAll('.video-1');
-        function handleClick(video) {
-            let pauseHidden=video.querySelector('.video-pause').classList.contains('hidden');
-            if(pauseHidden) {
-                video.querySelector('.video-pause').classList.remove('hidden');
-                video.querySelector('.video-play').classList.add('hidden');
-                video.querySelector('video').play();
-            }   else {
-                video.querySelector('.video-pause').classList.add('hidden');
-                video.querySelector('.video-play').classList.remove('hidden');
+        function videoIsPlaying(video) {
+            return (!video.querySelector('video').paused && !video.querySelector('video').ended && video.querySelector('video').readyState > 2);
+        }
+        function removePlayAddPauseButton(video) {
+            video.querySelector('.play-pause').classList.remove('hidden');
+            video.querySelector('.video-pause').classList.remove('hidden');
+            video.querySelector('.video-play').classList.add('hidden');
+        }
+        function removePauseAddPlayButton(video) {
+            video.querySelector('.play-pause').classList.remove('hidden');
+            video.querySelector('.video-pause').classList.add('hidden');
+            video.querySelector('.video-play').classList.remove('hidden');
+        }
+        function removeAllButtons(video) {
+            video.querySelector('.play-pause').classList.add('hidden');
+        }
+        function handleMouseClick(video) {
+            if(videoIsPlaying(video)) {
                 video.querySelector('video').pause();
+                removePauseAddPlayButton(video);
+            }   else {
+                video.querySelector('video').play();
+                removePlayAddPauseButton(video);
+                setTimeout(() => removeAllButtons(video), 300);
             }
         }
-        videos.forEach(video => {
-            video.addEventListener('click',() => handleClick(video));
-        });
+        function handleMouseEnter(video) {
+            if(videoIsPlaying(video)) {
+                removePlayAddPauseButton(video);
+                setTimeout(() => removeAllButtons(video), 600);
+            }
+        }
+        function handleMouseLeave(video) {
+            if(videoIsPlaying(video)) {
+                removeAllButtons(video);
+            }
+        }
+        function handleTap(video) {
+            if(videoIsPlaying(video)) {
+                video.querySelector('video').pause();
+                removePauseAddPlayButton(video);
+            }   else {
+                video.querySelector('video').play();
+                removePlayAddPauseButton(video);
+                setTimeout(() => removeAllButtons(video), 300);
+            }
+        }
+        if(window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            videos.forEach(video => {
+                video.addEventListener('click',() => handleMouseClick(video));
+                video.addEventListener('mouseenter',() => handleMouseEnter(video));
+                video.addEventListener('mouseleave',() => handleMouseLeave(video));
+            });
+        }   else {
+            videos.forEach(video => {
+                video.addEventListener('click',() => handleTap(video));
+            });
+        }
     </script>
 {% endblock %}

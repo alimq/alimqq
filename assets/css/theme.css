@@ -149,6 +149,7 @@ select:focus {
 }
 #popup-menu.visible {
     position: absolute;
+    z-index: 100;
     top: 0;
     right: 0;
     display: flex !important;
@@ -225,6 +226,6 @@ select:focus {
         width: 8vw;
     }
 }
-.video-pause.hidden,.video-play.hidden {
+.video-pause.hidden,.video-play.hidden,.play-pause.hidden {
     display: none;
 }
