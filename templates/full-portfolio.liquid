@@ -3,12 +3,13 @@
 Full Portfolio
 {% endblock %}
 {% block content %}
+
+{% for item in dict %}
+    {% assign work = item[1] %}
     <div class="hero portfolio">
         <div class="container item-container">
-            {% for item in dict %}
-                {% assign work = item[1] %}
                 <div class="item">
-                    <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
+                    <p class="subtitle">{{ work.name }}, {{ work.type }}</p>
                     <div class="video-1">
                         <video muted preload="none" class="video-1"
                         src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">
@@ -42,9 +43,9 @@ Full Portfolio
                         </a>
                     </div>
                 </div>
-            {% endfor %}
         </div>
     </div>
+{% endfor %}
     <script>
         let videos=document.querySelectorAll('.video-1');
         function videoIsPlaying(video) {

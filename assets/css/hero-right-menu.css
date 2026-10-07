@@ -1,6 +1,6 @@
 .hero-right-menu {
     cursor: pointer;
-    padding-right: 6px;
+    padding-right: var(--gap-in-sections);
 }
 .hero-full-right-menu ul {
     display: flex;
@@ -14,7 +14,7 @@
 @media (min-width: 420px) and (max-width: 1279px) {
     .hero-right-menu {
         width: 6vw;
-        padding-right: 1.5vw;
+        padding-right: var(--gap-in-sections);
     }
     .header .hero-full-right-menu {
         display: none;
@@ -25,9 +25,9 @@
         display: none;
     }
     .header .hero-full-right-menu ul {
-        gap: 3vw;
+        gap: var(--gap-in-blocks);
     }
     .header .hero-full-right-menu {
-        padding-right: 1.5vw;
+        padding-right: var(--gap-in-sections);
     }
 }

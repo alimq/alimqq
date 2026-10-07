@@ -2,6 +2,10 @@
     display: flex;
     max-width: var(--container-max-width) !important;
 }
+.hero {
+    
+    background-color: var(--bg);
+}
 .hero .container * {
     max-width: 100%;
 }
@@ -23,7 +27,7 @@
     .hero .container {
         flex-direction: row;
         justify-content: center;
-        gap: 3vw;
+        gap: var(--gap-in-sections);
     }
     .hero .container .block-1 {
         display: none;

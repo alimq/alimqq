@@ -1,6 +1,6 @@
 @media (max-width: 419px) {
     .services .container {
-        gap: 12px;
+        gap: var(--gap-in-sections);
     }
 }
 @media (min-width: 420px) {

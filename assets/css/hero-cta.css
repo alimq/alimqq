@@ -5,12 +5,9 @@
     justify-content: center;
     background-color: #ffffff;
     box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding: var(--gap-in-blocks);
     box-sizing: border-box;
-    gap: 6px;
+    gap: var(--gap-in-blocks);
 }
 .cta-p {
     margin-top: 0;
@@ -30,9 +27,6 @@
     .hero-cta .cta-block {
         width: 100%;
         height: auto;
-    }
-    .hero-cta .cta-block {
-        box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2);
     }
 }
 .hero .hero-cta ul {
@@ -55,14 +49,14 @@
     .hero .hero-cta input {
         width: 12px !important;
         height: 12px !important;
-        margin-right: 8px !important;
+        margin-right: var(--gap-in-blocks) !important;
     }
 }
 @media (max-width: 4096px) {
     .hero .hero-cta input {
-        width: 2vw;
-        height: 2vw;
-        margin-right: 1vw;
+        width: 32px;
+        height: 32px;
+        margin-right: var(--gap-in-blocks);
     }
 }
 .fieldset {

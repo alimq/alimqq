@@ -6,7 +6,7 @@ Work - {{ work.name }}
     <div class="hero portfolio">
         <div class="container item-container">
             <div class="item">
-                <p class="cta-p">{{ work.name }}, {{ work.type }}</p>
+                <p class="subtitle">{{ work.name }}, {{ work.type }}</p>
                 <div class="video-1">
                     <video muted preload="none" class="video-1"
                     src="{{ work.video | asset_url }}" poster="{{ work.poster | asset_url }}">

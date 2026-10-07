@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 6px;
+    padding-top: var(--gap-in-sections);
     max-width: var(--container-max-width);
     margin: auto;
 }
 @media (min-width: 420px) {
     .header {
-        padding-top: 1.5vw;
-        padding-bottom: 1.5vw;
+        padding-top: var(--gap-in-sections);
+        padding-bottom: var(--gap-in-sections);
     }
 }

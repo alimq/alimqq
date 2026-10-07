@@ -11,6 +11,6 @@
 }
 @media (min-width: 420px) {
     .cta-paragraph {
-        max-width: 60%;
+        max-width: 65ch;
     }
 }

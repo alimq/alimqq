@@ -10,20 +10,8 @@
     justify-content: center;
     box-sizing: border-box;
 }
-@media (max-width: 419px) {
-    .send-btn {
-    }
-}
-@media (min-width: 240px) {
-    .send-btn {
-    }
-    .cta-div {
-    }
-}
 @media (min-width: 420px) {
     .hero .container {
         margin: auto;
-    }
-    .cta-div {
     }
 }

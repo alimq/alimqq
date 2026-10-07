@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 6px;
+    gap: var(--gap-in-blocks);
 }
 .hero.portfolio .container {
     display: flex;
@@ -51,22 +51,12 @@
 .item-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 42px !important;
-}
-@media (min-width: 420px) {
-    .item-container {
-        gap: 10vw !important;
-    }
+    gap: var(--gap-in-blocks) !important;
 }
 .item {
     display: flex !important;
     flex-direction: column !important;
-    gap: 4px !important;
-}
-@media (min-width: 420px) {
-    .item {
-        gap: 1vw !important;
-    }
+    gap: var(--gap-in-blocks) !important;
 }
 .buttons {
     display: inline-flex;
@@ -74,22 +64,14 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: var(--gap-in-blocks);
 }
 button {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-}
-@media (min-width: 420px) {
-    .buttons {
-        gap: 1vw;
-    }
-    button {
-        gap: 1vw;
-    }
+    gap: var(--gap-in-blocks);
 }
 .item-container ul {
     list-style-type: disc !important;
