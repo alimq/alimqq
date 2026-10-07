@@ -101,7 +101,15 @@ app.get('/contacts', (req, res) => {
 
 app.get('/favicon.ico', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'assets/favicon.ico'), {});
-})
+});
+
+app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '/robots.txt'), {});
+});
+
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '/sitemap.xml'), {});
+});
 
 app.get('/work/:name', (req, res) => {
     let work=req.params.name;
