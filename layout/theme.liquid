@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <meta property="description" content="{% block desc %}{% endblock %}">
+    <meta name="description" content="{% block desc %}{% endblock %}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{% block og_url %}{% endblock %}">
     <meta property="og:description" content="{% block og_desc %}{% endblock %}">
     <meta property="og:title" content="{% block og_title %}{% endblock %}">
     <meta property="og:image" content="{% block og_image %}{% endblock %}">
-    <meta property="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="Alimqq">
     <link rel="canonical" href="{{ canonical }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | asset_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | asset_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
     <link rel="manifest" href="{{ 'site.webmanifest' | asset_url }}">
     <link rel="preload" href="{{ 'Inter-latin.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ 'Cormorant-latin.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
