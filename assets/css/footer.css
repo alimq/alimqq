@@ -1,6 +1,7 @@
 .footer {
     padding-top: var(--gap-in-sections);
     padding-bottom: var(--gap-in-sections);
+    border-top: 2px solid var(--accent);
 }
 @media (min-width: 420px) {
     .footer {

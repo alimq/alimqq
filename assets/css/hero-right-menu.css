@@ -25,7 +25,7 @@
         display: none;
     }
     .header .hero-full-right-menu ul {
-        gap: var(--gap-in-blocks);
+        gap: var(--gap-in-sections);
     }
     .header .hero-full-right-menu {
         padding-right: var(--gap-in-sections);

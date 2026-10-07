@@ -1,5 +1,6 @@
 .cta-paragraph {
     display: flex;
+    margin: auto;
 }
 .about .container {
     display: flex;

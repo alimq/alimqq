@@ -43,10 +43,12 @@
 }
 .video-1 {
     width: auto;
-    aspect-ratio: 1920/1040 !important;
     height: auto;
     overflow: hidden;
-    box-shadow: 1vw 1vw 2vw rgba(0,0,0,0.2) !important;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2) !important;
+}
+.video-1 video {
+    aspect-ratio: 1920/1040 !important;
 }
 .item-container {
     display: flex !important;

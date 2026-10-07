@@ -18,12 +18,15 @@
             Contacts</li></a>
         </ul>
     </div>
-    {% render 'header' %}
-    <div class="wrapper">
-        {% block content %}{% endblock %}
+    <div class="everything">
+        {% render 'header' %}
+        <div class="wrapper">
+            {% block content %}{% endblock %}
+            {% render 'footer' %}
+        </div>
+        <p class="width-text">
+        
+        </p>
     </div>
-    <p class="width-text">
-    
-    </p>
 </body>
 </html>

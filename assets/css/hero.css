@@ -2,10 +2,6 @@
     display: flex;
     max-width: var(--container-max-width) !important;
 }
-.hero {
-    
-    background-color: var(--bg);
-}
 .hero .container * {
     max-width: 100%;
 }
