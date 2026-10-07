@@ -13,20 +13,20 @@
     margin-top: 0;
     text-align: center;
 }
-.hero-cta .cta-block {
-    aspect-ratio: 1/0.6;
-}
 .hero-cta {
     margin: auto;
+}
+label {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
 }
 @media (min-width: 420px) {
     .hero-cta {
         width: 100%;
-        height: auto;
     }
     .hero-cta .cta-block {
         width: 100%;
-        height: auto;
     }
 }
 .hero .hero-cta ul {
@@ -35,7 +35,7 @@
     margin: 0;
 }
 .hero .hero-cta input {
-    background-color: #fe8a69;
+    border: 2px solid var(--accent);
     appearance: none;
     cursor: pointer;
 }
@@ -43,7 +43,7 @@
     background-image: url('/assets/checked.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65%;
+    background-size: 50%;
 }
 @media (max-width: 699px) {
     .hero .hero-cta input {

@@ -35,6 +35,10 @@ a {
 a:visited,a:hover,a:active {
     color: inherit;
 }
+button.contoured {
+    background: transparent !important;
+    border: 2px solid var(--accent);
+}
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -55,12 +59,11 @@ a:visited,a:hover,a:active {
     text-decoration-line: underline;
     text-decoration-color: #fe8a69 !important;
     text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+    text-underline-offset: 8px;
 }
 .subtitle {
     font-size: var(--heading);
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: var(--gap-in-blocks);
 }
 body {
     font-size: var(--text);
@@ -72,8 +75,8 @@ h1,h2,h3,h4,h5,h6,p {
 }
 @media (min-width: 420px) {
     .title {
-        text-decoration-thickness: 4px;
-        text-underline-offset: 12px;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 8px;
     }
 }
 ul {
@@ -182,6 +185,7 @@ video::-webkit-media-controls-panel {
     bottom: 0;
     right: 0;
     opacity: 0.5;
+    background-color: transparent;
 }
 .play-pause img {
     width: 32px;

@@ -90,7 +90,7 @@
     .send-btn {
     }
     .btn-pic {
-        width: 3vw !important;
+        width: 32px !important;
     }
 }
 @media (min-width: 1280px) {
