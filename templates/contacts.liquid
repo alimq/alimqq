@@ -6,25 +6,26 @@
 {% block og_title %}Contacts - Alim Imanmalik{% endblock %}
 {% block og_image %}https://alimqq.com/assets/og.png{% endblock %}
 {% block content %}
-    <div class="hero">
+    <div class="hero" style="display: flex;flex-direction:column;">
+        <h1 class="subtitle" style="margin: auto">Hire me:</h1>
         <div class="container">
             <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
                 <button class="cta-talk">
                     Hire me on Upwork
-                    <img src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
+                    <img alt="" src="{{ 'upwork.svg' | asset_url }}" class="btn-pic">
                 </button>
             </a>
             <div class="cta-div">
                 <a target="_blank"
                  href="https://www.linkedin.com/in/alim-imanmalik/">
                 <button class="send-btn contoured">
-                Connect on<img class="btn-pic" src="{{ 'linkedin.svg' | asset_url }}">
+                Connect on<img alt="LinkedIn" class="btn-pic" src="{{ 'linkedin.svg' | asset_url }}">
                 </button></a>
             </div>
             <a href="https://github.com/alimq" target="_blank">
                 <button class="cta-talk contoured">
                     View my Github
-                    <img src="{{ 'github.svg' | asset_url }}" class="btn-pic">
+                    <img alt="Github" src="{{ 'github.svg' | asset_url }}" class="btn-pic">
                 </button>
             </a>
         </div>

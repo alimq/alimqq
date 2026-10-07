@@ -83,6 +83,7 @@ const prodCss = isProd ? fs.readFileSync(cssPath, 'utf8') : '';
 
 app.use((req,res,next)=>{
     res.locals.inline_css = isProd ? prodCss : fs.readFileSync(cssPath,'utf8');
+    res.locals.canonical = 'https://alimqq.com' + req.path;
     next();
 });
 
@@ -108,7 +109,7 @@ app.get('/work/:name', (req, res) => {
     if(arr.includes(work))
         res.render('work', { work: dict[work] });
     else
-        res.status(404);
+        res.status(404).send('Not found');
 });
 
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));
