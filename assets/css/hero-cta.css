@@ -28,6 +28,12 @@ label {
         width: 100%;
     }
 }
+@media (max-width: 1280px) {
+    .hero .container {
+        padding-left: var(--gap-in-blocks);
+        padding-right: var(--gap-in-blocks);
+    }
+}
 .hero .hero-cta ul {
     list-style: none;
     padding: 0;
@@ -37,6 +43,7 @@ label {
     border: 2px solid var(--accent);
     appearance: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 .hero .hero-cta input:checked {
     background-image: url('/assets/checked.svg');
@@ -46,8 +53,8 @@ label {
 }
 @media (max-width: 699px) {
     .hero .hero-cta input {
-        width: 12px !important;
-        height: 12px !important;
+        width: 24px !important;
+        height: 24px !important;
         margin-right: var(--gap-in-blocks) !important;
     }
 }

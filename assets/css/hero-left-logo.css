@@ -1,8 +1,5 @@
-.hero-left-logo {
-    padding-left: var(--gap-in-sections);
-}
-@media (min-width: 420px) {
+@media (max-width: 1280px) {
     .hero-left-logo {
-        padding-left: var(--gap-in-sections);
+        padding-left: var(--gap-in-blocks);
     }
 }

@@ -3,7 +3,7 @@
     --dark: #1d1d1f;
     --bg: #fff6f2;
     --text: clamp(15px,1vw+10px,18px);
-    --heading: 16px;
+    --heading: 20px;
     --container-max-width: 1200px;
     --gap-in-blocks: 8px;
     --gap-in-sections: 16px;
@@ -11,7 +11,7 @@
 }
 @media (min-width: 420px) {
     :root {
-        --heading: 20px;
+        --heading: 28px;
         --gap-in-blocks: 16px;
         --gap-in-sections: 32px;
         --gap-sections: 96px;
@@ -19,7 +19,7 @@
 }
 @media (min-width: 700px) {
     :root {
-        --heading: 28px;
+        --heading: 44px;
     }
 }
 @media (min-width: 1280px) {
@@ -71,12 +71,13 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    background-color: var(--bg);
 }
 .everything {
-    max-width: 1250px !important;
-    width: 1250px !important;
+    max-width: 1296px !important;
+    width: 100%;
     margin: auto;
-    background-color: var(--bg);
+    background-color: #ffffff;
 }
 h1,h2,h3,h4,h5,h6,p {
     margin: 0;
@@ -141,43 +142,22 @@ video::-webkit-media-controls-panel {
     top: 0;
     right: 0;
     display: flex !important;
-    width: 100%;
+    width: fit-content;
     background-color: #ffffff;
     box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-@media (max-width: 419px) {
-    #popup-menu.visible {
-        aspect-ratio: 1/0.5;
-        width: 80%;
-        top: 40px;
-    }
-}
-@media (max-width: 240px) {
-    #popup-menu.visible {
-        aspect-ratio: 1/0.8;
-        width: 80%;
-        top: 40px;
-    }
-}
-@media (min-width: 420px) {
-    #popup-menu.visible {
-        aspect-ratio: 1/0.3;
-        width: 50%;
-        top: 9vw;
-        box-sizing: border-box;
-    }
-    #popup-menu ul a {
-        text-decoration-thickness: 4px;
-        text-underline-offset: 4px;
-    }
+    box-sizing: border-box;
+    top: 40px;
+    padding: var(--gap-in-sections);
+    right: var(--gap-in-sections);
 }
 #popup-menu ul {
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: var(--gap-in-sections);
 }
 .wrapper {
     display: flex;
