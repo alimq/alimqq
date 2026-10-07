@@ -1,7 +1,10 @@
 {% layout default_layout %}
-{% block title %}
-Work - {{ work.name }}
-{% endblock %}
+{% block title %}{{ work.name }} Shopify Store - Case Study{% endblock %}
+{% block desc %}{{ work.meta-desc }}{% endblock %}
+{% block og_url %}https://alimqq.com/{{ work.page }}{% endblock %}
+{% block og_desc %}{{ work.meta-desc }}{% endblock %}
+{% block og_title %}{{ work.name }} Shopify Store - Case Study{% endblock %}
+{% block og_image %}https://alimqq.com/assets/{{ work.poster }}{% endblock %}
 {% block content %}
     <div class="hero portfolio">
         <div class="container item-container">

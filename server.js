@@ -12,6 +12,7 @@ const dict = {
         'poster': 'demo.webp',
         'video': 'demo.mp4',
         'type': 'Tea',
+        'meta-desc': 'Website selling tea, designed to be responsive on mobile, and made with HTML and CSS - Case Study.',
         'what-i-did': 'Problem: given Figma Desktop design, make a website that works on mobile too.\
         <br>What I did: <ul><li>Created 3 designs for breakpoints 162px,700px,1280px based on the 1920px design</li>\
         <li>Coded media queries, starting from mobile and growing to Desktop, to ensure website is responsive</li>\
@@ -24,6 +25,7 @@ const dict = {
         'poster': 'lanah.webp',
         'video': 'lanah.mp4',
         'type': 'Clothes',
+        'meta-desc': 'Website selling clothes, pixel-perfect like the Figma design, made with HTML and CSS - Case Study.',
         'what-i-did': 'Problem: given Figma Desktop design, match the Desktop website perfectly to it.\
         <br>What I did: <ul><li>Coded the sections using pure HTML and CSS and Liquid, which is used in Shopify</li>\
         <li>Measured the sizes of objects in Figma before coding them</li>\
@@ -36,6 +38,7 @@ const dict = {
         'poster': 'sketch.webp',
         'video': 'sketch.mp4',
         'type': 'Shirts',
+        'meta-desc': 'Website selling shirts, made based on a Figma design, with HTML and CSS - Case Study.',
         'what-i-did': "Problem: given Figma Desktop design, match the Desktop website perfectly to it.\
         <br>What I did: <ul><li>Used Shopify's editor to build the sections</li>\
         <li>Wrote custom code for sections where Shopify's editor was not capable</li>\
@@ -94,6 +97,10 @@ app.get('/full-portfolio', (req, res) => {
 app.get('/contacts', (req, res) => {
     res.render('contacts', {});
 });
+
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'assets/favicon.ico'), {});
+})
 
 app.get('/work/:name', (req, res) => {
     let work=req.params.name;
