@@ -23,6 +23,9 @@ Full Portfolio
                         </button>
                     </div>
                     <div class="buttons">
+                        <a target="_blank" href="{{ work.page }}">
+                            See details
+                        </a>
                         <form style="display: inline" method="post" target="_blank" action="{{ work.link }}password">
                             <input type="hidden" name="form_type" value="storefront_password">
                             <input type="hidden" name="password" value="alimqq">
@@ -31,11 +34,6 @@ Full Portfolio
                                 Go to site (Password: alimqq)
                             </button>
                         </form>
-                        <a target="_blank" href="{{ work.page }}">
-                            <button class="cta-talk">
-                                See details
-                            </button>
-                        </a>
                         <a href="https://www.upwork.com/freelancers/~01dfbd9e330f3accb6" target="_blank">
                             <button class="cta-talk" id="cta-talk">
                                 Hire me on Upwork

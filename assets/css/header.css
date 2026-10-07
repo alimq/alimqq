@@ -3,6 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 6px;
+    max-width: var(--container-max-width);
+    margin: auto;
 }
 @media (min-width: 420px) {
     .header {

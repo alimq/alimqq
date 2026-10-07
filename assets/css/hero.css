@@ -1,6 +1,9 @@
 .hero .container {
     display: flex;
-    width: 100%;
+    max-width: var(--container-max-width) !important;
+}
+.hero .container * {
+    max-width: 100%;
 }
 .hero .container .block-2 {
     display: flex;
@@ -26,11 +29,11 @@
         display: none;
     }
     .hero .container .block-2 {
-        width: 40%;
+        width: 50%;
     }
     .hero .container .block-3 {
         display: flex;
-        width: 40%;
+        width: 50%;
     }
 }
 @media (min-width: 420px) and (max-width: 699px) {
