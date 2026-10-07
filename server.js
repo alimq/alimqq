@@ -104,11 +104,11 @@ app.get('/favicon.ico', (req, res) => {
 });
 
 app.get('/robots.txt', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '/robots.txt'), {});
+    res.sendFile(path.resolve(__dirname, 'robots.txt'), {});
 });
 
 app.get('/sitemap.xml', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '/sitemap.xml'), {});
+    res.sendFile(path.resolve(__dirname, 'sitemap.xml'), {});
 });
 
 app.get('/work/:name', (req, res) => {
