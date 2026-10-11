@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "dotenv": "^18.0.7",
     "express": "^5.2.1",
-    "liquidjs": "^10.29.0"
+    "liquidjs": "^10.29.0",
+    "nodemailer": "^10.1.0",
+    "pg": "^8.23.1"
   },
   "name": "alimqq-responsive",
   "version": "1.0.0",

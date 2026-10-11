@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const { Liquid } = require('liquidjs');
 const path = require('path');
@@ -47,6 +48,7 @@ const dict = {
 };
 
 const app = express();
+app.set('trust proxy',1);
 const css = fs.readFileSync(path.resolve(__dirname,'assets/bundle.css'),'utf8');
 
 const engine = new Liquid({
@@ -87,6 +89,8 @@ app.use((req,res,next)=>{
     next();
 });
 
+app.use(express.urlencoded({extended: false }));
+
 app.get('/', (req, res) => {
     res.render('index', {});
 });
@@ -118,6 +122,56 @@ app.get('/work/:name', (req, res) => {
         res.render('work', { work: dict[work] });
     else
         res.status(404).send('Not found');
+});
+
+const nodemailer = require('nodemailer');
+const transporter = nodemailer.createTransport({
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true,
+    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+    tls: { rejectUnauthorized: process.env.SMTP_INSECURE !== '1' },
+});
+transporter.verify()
+    .then(()=>console.log('SMTP ready'))
+    .catch(err=>console.error('SMTP error:', err.message));
+
+const { Pool } = require('pg');
+const pool = new Pool({ connectionString: process.env.DATABASE_URL })
+app.post('/contact', async (req, res) => {
+    const { email, message } = req.body;
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!EMAIL_RE.test(email)) return res.status(400).send('Invalid email');
+    if(!message.trim()) return res.status(400).send('Empty message');
+    const { rows } = await pool.query(
+        'SELECT count(*) FROM contact WHERE ip = $1 AND created_at > now() - interval \'5 hours\'',
+        [req.ip]
+    );
+    const { rows: rows_all } = await pool.query(
+        'SELECT count(*) FROM contact WHERE created_at > now() - interval \'5 hours\''
+    )
+    if(Number(rows[0].count)<5 && Number(rows_all[0].count)<15) {
+        await pool.query(
+            'INSERT INTO contact (ip,email,message) VALUES ($1,$2,$3)',[req.ip,email,message.trim()]
+        );
+        await pool.query(
+            'DELETE FROM contact WHERE created_at < now() - interval \'7 days\''
+        );
+        console.log('Preparing to send email');
+        try {
+            await transporter.sendMail({
+                from: process.env.SMTP_USER,
+                to: process.env.SMTP_USER,
+                replyTo: email,
+                subject: '[alimqq.com] New inquiry',
+                text: `From: ${email}\n\n${message}`,
+            });
+            res.redirect('/contacts?sent=1');
+        }   catch (e) {
+            console.log(e);
+            res.status(500).send('Error sending mail');
+        }
+    }
 });
 
 app.listen(3000, () => console.log('Server running on http://localhost:3000'));

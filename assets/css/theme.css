@@ -73,6 +73,9 @@ body {
     flex-direction: column;
     background-color: var(--bg);
 }
+input,textarea {
+    font: inherit;
+}
 .everything {
     max-width: 1296px !important;
     width: 100%;
