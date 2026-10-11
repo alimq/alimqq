@@ -4,12 +4,12 @@
     </h1>
     <div class="cta-block">
         <div class="fieldset">
-            <label><input class="checkbox-service" checked type="radio" name="offer" value="option1"> Ready website - from $400</label>
-            <label><input class="checkbox-service" type="radio" name="offer" value="option2"> Feature(s) - from $200</label>
-            <label><input class="checkbox-service" type="radio" name="offer" value="option3"> Website template - from $500</label>
+            <label><input class="checkbox-service" checked type="radio" name="offer" value="option1" data-url="https://www.upwork.com/services/product/development-it-a-ready-to-sell-shopify-store-set-up-and-launched-for-your-brand-2109236645823988834?ref=project_share&tier=0"> Ready website - from $400</label>
+            <label><input class="checkbox-service" type="radio" name="offer" value="option2" data-url="https://www.upwork.com/services/product/development-it-a-custom-feature-for-your-shopify-website-2109246196793558162?ref=project_share&tier=0"> Feature(s) - from $200</label>
+            <label><input class="checkbox-service" type="radio" name="offer" value="option3" data-url="https://www.upwork.com/services/product/development-it-a-custom-template-for-your-shopify-website-2109247769329297581?ref=project_share&tier=0"> Website template - from $500</label>
         </div>
         <div class="buttons">
-            <a href="javascript:void(0)">
+            <a id="seeOffer" href="https://www.upwork.com/services/product/development-it-a-ready-to-sell-shopify-store-set-up-and-launched-for-your-brand-2109236645823988834?ref=project_share&tier=0" target="_blank">
                 <button class="contoured">
                     See offer
                 </button>
@@ -23,3 +23,12 @@
         </div>
     </div>
 </div>
+<script>
+    const checkboxes=document.querySelectorAll('.checkbox-service');
+    const seeOffer=document.getElementById('seeOffer');
+    checkboxes.forEach(checkbox=>{
+        checkbox.addEventListener('change',()=>{
+            seeOffer.href=checkbox.dataset.url;
+        }) 
+    })
+</script>

@@ -127,8 +127,8 @@ app.get('/work/:name', (req, res) => {
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     host: 'smtp.zoho.com',
-    port: 465,
-    secure: true,
+    port: 587,
+    secure: false,
     auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
     tls: { rejectUnauthorized: process.env.SMTP_INSECURE !== '1' },
 });
@@ -166,7 +166,7 @@ app.post('/contact', async (req, res) => {
                 subject: '[alimqq.com] New inquiry',
                 text: `From: ${email}\n\n${message}`,
             });
-            res.redirect('/contacts?sent=1');
+            res.redirect('/?sent=1');
         }   catch (e) {
             console.log(e);
             res.status(500).send('Error sending mail');
